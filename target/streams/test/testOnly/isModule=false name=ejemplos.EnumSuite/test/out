@@ -1,0 +1,8 @@
+[0m[[0m[0mdebug[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest ejemplos.[33mEnumSuite[0m.[36mpapelContraRoca[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest ejemplos.[33mEnumSuite[0m.[36mpapelContraRoca[0m finished, took 0.002 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest ejemplos.[33mEnumSuite[0m.[36mrocaContraTijeras[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest ejemplos.[33mEnumSuite[0m.[36mrocaContraTijeras[0m finished, took 0.0 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest ejemplos.[33mEnumSuite[0m.[36mtijerasContraPapel[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest ejemplos.[33mEnumSuite[0m.[36mtijerasContraPapel[0m finished, took 0.0 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 3 total, 0.007s[0m[0m
