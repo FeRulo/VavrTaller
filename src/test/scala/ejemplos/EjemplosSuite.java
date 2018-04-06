@@ -22,6 +22,9 @@ public class EjemplosSuite {
 
         System.out.println("persona:" + persona.name);
     }
+
+
+
     //Reduce
     //ParalellStreams
     //https://dzone.com/articles/think-twice-using-java-8

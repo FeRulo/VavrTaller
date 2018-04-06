@@ -46,4 +46,3 @@
 [error] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 [error] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 [error] 	at java.lang.Thread.run(Thread.java:748)
-[error] (ssExtractDependencies) sbt.librarymanagement.ResolveException: unresolved dependency: org.scala-lang#dotty_0.1;0.1: not found
