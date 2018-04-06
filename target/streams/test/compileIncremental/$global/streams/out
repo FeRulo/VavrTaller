@@ -12,17 +12,11 @@
 [0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(taller.DronSuite)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/s4n/Fernando/CorrientazoADomicilio/src/test/scala/taller/DronSuite.java)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll sources are invalidated.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRecompiling all 1 sources: invalidated sources (1) exceeded 50.0% of all sources[0m
 [0m[[0m[0minfo[0m] [0m[0mCompiling 1 Java source to /home/s4n/Fernando/CorrientazoADomicilio/target/scala-2.12/test-classes ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mAttempting to call com.sun.tools.javac.api.JavacTool@48c5a902 directly...[0m
-[0m[[0m[0mdebug[0m] [0m[0mJava compilation took 0.02861809 s[0m
-[0m[[0m[0mdebug[0m] [0m[0mJava analysis took 0.009198859 s[0m
-[0m[[0m[0mdebug[0m] [0m[0mJava compilation + analysis took 0.038486056 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mAttempting to call com.sun.tools.javac.api.JavacTool@3ff35b25 directly...[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation took 0.018772443 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava analysis took 0.00602117 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation + analysis took 0.025262942 s[0m
 [0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll newly invalidated classes after taking into account (previously) recompiled classes:Set()[0m
