@@ -1,32 +1,26 @@
 package taller;
 
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.*;
-import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 
-import serviciosDominio.ServicioDron;
+import serviciosDominio.ServicioEntregarAlmuerzos;
 import sustantivos.*;
-import static sustantivos.Direccion.*;
-import java.util.List;
 
 @RunWith(PowerMockRunner.class)
-//@PrepareForTest(fullyQualifiedNames = "serviciosDominio.ServicioDron")
+//@PrepareForTest(fullyQualifiedNames = "serviciosDominio.ServicioEntregarAlmuerzos")
 public class DronSuite {
 
     @Test
     public void probarIdeaNegocio0(){
 
-        Dron dron = ServicioDron.moverDron(new Dron(),"AAIIADAAI");
+        String posicionFinal = ServicioEntregarAlmuerzos.entregarPedido("AAIIADAAI");
 
-        System.out.println(dron.toString());
-        assertEquals("(-2,1,S)", "" + dron.toString());
+        System.out.println(posicionFinal);
+        assertEquals("(-2,1,S)", posicionFinal);
 
     }
 
