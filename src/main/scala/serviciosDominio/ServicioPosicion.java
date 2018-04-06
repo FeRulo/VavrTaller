@@ -39,7 +39,6 @@ public class ServicioPosicion {
             adelanteMirandoOeste = (x,y,d)-> new Posicion(x-1, y, d);
 
     public static Posicion cambiarPosicion(Posicion p, Instruccion i){
-        System.out.println("posicion actual:" + p.toString());
         Posicion resultado = new Posicion();
         switch (i){
             case A:

@@ -20,8 +20,4 @@ public class ServicioEntregarAlmuerzos {
     public static Dron moverDron(Dron dron, Instruccion instrunccion){
         return null;
     };
-
-    public static String extra(){
-        return "hola";
-    }
 }

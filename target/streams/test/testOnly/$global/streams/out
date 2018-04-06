@@ -1,4 +1,4 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(taller.DronSuite, com.novocode.junit.RunWithFingerprint@476c7b17, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(taller.DronSuite, com.novocode.junit.RunWithFingerprint@6a55e45, false, [SuiteSelector])[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
 [0m[[0m[0minfo[0m] [0m[0mPassed: Total 1, Failed 0, Errors 0, Passed 1[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
