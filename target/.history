@@ -2,3 +2,5 @@ testOnly ejemplos.EnumSuite
 testOnly taller.DronSuite
 testOnly ejemplos.MockitoSuite
 testOnly taller.DronSuite
+compile
+testOnly taller.DronSuite

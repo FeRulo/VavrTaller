@@ -28,9 +28,9 @@ public class DronSuite {
 //        when(ServicioDron.moverDron(new Dron(),"hola mundo"))
 //                .thenReturn(new Dron());
 
-        List<Instruccion> instrucciones = ServicioDron.moverDron(new Dron(),"AAIA");
-
-        assertEquals("I", "" + instrucciones.get(2));
+        Dron dron = ServicioDron.moverDron(new Dron(),"AAAAA");
+        System.out.println(dron.toString());
+        assertEquals("(0,5,N)", "" + dron.toString());
 
     }
 
