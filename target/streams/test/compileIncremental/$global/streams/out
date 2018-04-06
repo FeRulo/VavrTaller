@@ -15,10 +15,10 @@
 [0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(taller.DronSuite)[0m
 [0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/s4n/Fernando/CorrientazoADomicilio/src/test/scala/taller/DronSuite.java)[0m
 [0m[[0m[0minfo[0m] [0m[0mCompiling 1 Java source to /home/s4n/Fernando/CorrientazoADomicilio/target/scala-2.12/test-classes ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mAttempting to call com.sun.tools.javac.api.JavacTool@d5ce41c directly...[0m
-[0m[[0m[0mdebug[0m] [0m[0mJava compilation took 0.033038934 s[0m
-[0m[[0m[0mdebug[0m] [0m[0mJava analysis took 0.008507197 s[0m
-[0m[[0m[0mdebug[0m] [0m[0mJava compilation + analysis took 0.042157119 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mAttempting to call com.sun.tools.javac.api.JavacTool@123af3ca directly...[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation took 0.030939962 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava analysis took 0.006540736 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation + analysis took 0.038075865 s[0m
 [0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
 [0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
