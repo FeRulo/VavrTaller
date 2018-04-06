@@ -1,1 +1,37 @@
-[0m[[0m[0mdebug[0m] [0m[0mFull compilation, no sources in previous analysis.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/home/s4n/Fernando/CorrientazoADomicilio/src/main/scala/serviciosDominio/ServicioDron.java, /home/s4n/Fernando/CorrientazoADomicilio/src/main/scala/sustantivos/Instruccion.java)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(serviciosDominio.ServicioDron, sustantivos.Instruccion)[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(serviciosDominio.ServicioDron, sustantivos.Instruccion)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/s4n/Fernando/CorrientazoADomicilio/src/main/scala/serviciosDominio/ServicioDron.java, /home/s4n/Fernando/CorrientazoADomicilio/src/main/scala/sustantivos/Instruccion.java)[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 2 Java sources to /home/s4n/Fernando/CorrientazoADomicilio/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mAttempting to call com.sun.tools.javac.api.JavacTool@5c6cb7b3 directly...[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation took 0.059637636 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava analysis took 0.013557475 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation + analysis took 0.073742138 s[0m
+[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from serviciosDominio.ServicioDron...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(serviciosDominio.ServicioDron)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(serviciosDominio.ServicioDron)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(serviciosDominio.ServicioDron,ModifiedNames(changes = UsedName(moverDron,[Default]))) invalidates 1 classes due to The serviciosDominio.ServicioDron has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(moverDron,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(serviciosDominio.ServicioDron)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll newly invalidated classes after taking into account (previously) recompiled classes:Set()[0m

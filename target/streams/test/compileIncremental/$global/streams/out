@@ -1,9 +1,35 @@
-[0m[[0m[0mdebug[0m] [0m[0mFull compilation, no sources in previous analysis.[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll sources are invalidated.[0m
-[0m[[0m[0mdebug[0m] [0m[0mRecompiling all 1 sources: invalidated sources (1) exceeded 50.0% of all sources[0m
-[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Java source to /home/s4n/Fernando/CorrientazoADomicilio/target/test-classes ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mAttempting to call com.sun.tools.javac.api.JavacTool@25454d81 directly...[0m
-[0m[[0m[0mdebug[0m] [0m[0mJava compilation took 0.323865301 s[0m
-[0m[[0m[0mdebug[0m] [0m[0mJava analysis took 0.081423466 s[0m
-[0m[[0m[0mdebug[0m] [0m[0mJava compilation + analysis took 0.409741863 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe serviciosDominio.ServicioDron has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(moverDron,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) serviciosDominio.ServicioDron: Set(); now invalidating by inheritance (internally).[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) serviciosDominio.ServicioDron.[0m
+[0m[[0m[0mdebug[0m] [0m[0mName hashing optimization doesn't apply to non-Scala dependency: taller.DronSuite[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/home/s4n/Fernando/CorrientazoADomicilio/src/test/scala/taller/DronSuite.java)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set(NamesChange(serviciosDominio.ServicioDron,ModifiedNames(changes = UsedName(moverDron,[Default]))))[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(taller.DronSuite)[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set(taller.DronSuite)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(taller.DronSuite)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/s4n/Fernando/CorrientazoADomicilio/src/test/scala/taller/DronSuite.java)[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Java source to /home/s4n/Fernando/CorrientazoADomicilio/target/scala-2.12/test-classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mAttempting to call com.sun.tools.javac.api.JavacTool@5c6cb7b3 directly...[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation took 0.033118136 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava analysis took 0.007374707 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation + analysis took 0.040950676 s[0m
 [0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll newly invalidated classes after taking into account (previously) recompiled classes:Set()[0m
