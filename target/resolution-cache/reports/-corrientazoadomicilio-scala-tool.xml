@@ -7,7 +7,7 @@
 		revision="0.1.0-SNAPSHOT"
 		conf="scala-tool"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180405152132"/>
+		date="20180406092248"/>
 	<dependencies>
 		<module organisation="org.scala-lang" name="dotty_0.1">
 			<revision name="0.1" error="not found" downloaded="false" searched="false" conf="default(compile)" position="-1">
