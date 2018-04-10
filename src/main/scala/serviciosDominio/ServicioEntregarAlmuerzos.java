@@ -14,10 +14,14 @@ public class ServicioEntregarAlmuerzos {
                 .codePoints()
                 .mapToObj(c -> Instruccion.valueOf(String.valueOf((char) c)))
                 .collect(new DronCollector());
-        return "("+d.p.x+","+d.p.y+","+d.p.d+")";
+        return "("+d.p.x+","+d.p.y+") dirección "+d.p.d;
     }
 
-    public static Dron moverDron(Dron dron, Instruccion instrunccion){
-        return null;
+    public static String entregarPedido(Dron dron0, String instrucciones){
+        dron0 = instrucciones
+                .codePoints()
+                .mapToObj(c -> Instruccion.valueOf(String.valueOf((char) c)))
+                .collect(new DronCollector(dron0));
+        return "("+dron0.p.x+","+dron0.p.y+") dirección "+dron0.p.d;
     };
 }
