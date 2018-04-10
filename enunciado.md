@@ -32,7 +32,7 @@ Aclaraciones:
 Cada línea del archivo de texto corresponde a una entrega de un almuerzo.
 El dron siempre inicia en la posición (0, 0) orientación Norte
 Para el dueño de “Su corrientazo a domicilio” es importante monitorear el estado
-del dron siempre, razón por la cual espera que el sistema le entrega información en
+del dron siempre, razón por la cual espera que el sistema le entrege información en
 tiempo real de cada una de las entregas realizadas. Por esta razón solicita que una
 vez terminada la ejecución de las rutas se le entregue un informe en otro archivo
 de texto de la posición del dron en el plano cartesiano de cada entrega.
