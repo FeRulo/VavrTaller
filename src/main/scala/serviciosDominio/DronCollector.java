@@ -1,6 +1,8 @@
 package serviciosDominio;
 
 
+import com.sun.xml.internal.ws.api.message.ExceptionHasMessage;
+import com.sun.xml.internal.ws.api.message.Message;
 import sustantivos.Dron;
 import sustantivos.Instruccion;
 
@@ -13,9 +15,20 @@ import java.util.function.Supplier;
 import java.util.stream.Collector;
 
 public class DronCollector implements Collector<Instruccion, Dron, Dron> {
+
+    private Dron dron0 = null;
+
+    public DronCollector(Dron dron0) {
+        this.dron0 = dron0;
+    }
+
+    public DronCollector() {
+        this.dron0 = new Dron();
+    }
+
     @Override
     public Supplier<Dron> supplier() {
-        return Dron::new;
+        return () -> this.dron0;
     }
 
     @Override
@@ -27,10 +40,7 @@ public class DronCollector implements Collector<Instruccion, Dron, Dron> {
 
     @Override
     public BinaryOperator<Dron> combiner() {
-        return (Dron d1, Dron d2) -> {
-            //Sin implementar retorna un dron vacío
-            return new Dron();
-        };
+        return (Dron d1, Dron d2) -> d1;
     }
 
     @Override

@@ -15,12 +15,36 @@ import sustantivos.*;
 public class DronSuite {
 
     @Test
-    public void probarIdeaNegocio0(){
+    public void entregarPedidoDesde0(){
         String nameTest = "Prueba Idea Negocio 0";
-        String posicionFinal = ServicioEntregarAlmuerzos.entregarPedido("AAIIADAAI");
+        String pedido = "AAAIA";
+        String posicionFinal = ServicioEntregarAlmuerzos.entregarPedido(pedido);
 
         System.out.println("Test"+nameTest +" /Posición Final del dron: "+posicionFinal);
-        assertEquals("(-2,1,S)", posicionFinal);
+        assertEquals("(-1,3) dirección O", posicionFinal);
     }
+
+    @Test
+    public void entregarPedidoDesdePDronExistente(){
+        String nameTest = "Prueba Idea Negocio 1";
+        String pedido = "AAAAD";
+        Dron dronPasado = new Dron(1,new Posicion(0,5,Direccion.O));//Dron en posición (0,5,O)
+        String posicionFinal = ServicioEntregarAlmuerzos.entregarPedido(dronPasado,pedido);
+
+        System.out.println("Test"+nameTest +" /Posición Final del dron: "+posicionFinal);
+        assertEquals("(-4,5) dirección N", posicionFinal);
+    }
+
+    @Test
+    public void entregarTresPedidos(){
+        String[] pedidos = {"AAAAI","AAAAI","AAAAD"};
+        assertEquals(ServicioEntregarAlmuerzos.reportarVariasEntregas(pedidos),
+                "== Reporte de entregas ==\n" +
+                "(0,4) Dirección O\n" +
+                "(-4,4) Dirección S\n" +
+                "(-4,0) Dirección O\n");
+    }
+
+
 
 }
