@@ -9,9 +9,11 @@ import java.io.*;
 
 public class Main {
     public static void main(String [] arg) {
-        importarInstrucciones("src/main/resources/rutas.txt")
-                .flatMap(instrucciones -> Try.of(()->reportarVariasEntregas(instrucciones))
-                .flatMap(reporte ->Try.of(()->exportarReporte(reporte,"src/main/resources/reporte.txt"))));
+        Try<String> resultado = importarInstrucciones("src/main/resources/rutas.txt")
+                .map(instrucciones -> reportarVariasEntregas(instrucciones))
+                .flatMap(reporte -> exportarReporte(reporte,"src/main/resources/reporte.txt"));
+        String respuesta = resultado.isFailure()? "Especificación de ruta inválida": "Operación exitosa";
+        System.out.println(respuesta);
     }
 }
 

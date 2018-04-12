@@ -19,8 +19,7 @@ import static org.powermock.api.mockito.PowerMockito.mockStatic;
 import static dominio.servicios.DistribuidorAlmuerzos.*;
 import dominio.entidades.*;
 
-import java.io.IOException;
-
+import java.io.FileNotFoundException;
 @RunWith(PowerMockRunner.class)
 //@PrepareForTest(fullyQualifiedNames = "DistribuidorAlmuerzos")
 public class DronSuite {
@@ -88,9 +87,20 @@ public class DronSuite {
     public void leerArchivoReportarYArchivar(){
         Try<String> resultado = importarInstrucciones("src/main/resources/rutas.txt")
                 .flatMap(instrucciones -> Try.of(()->reportarVariasEntregas(instrucciones))
-                .flatMap(reporte ->Try.of(()->exportarReporte(reporte,"src/main/resources/reporte.txt"))));
-        assertEquals(Success("hola"),resultado);
+                        .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reporte.txt")
+                        ));
+        resultado.get();
+        String respuesta = (resultado.isFailure())? "Especificación de ruta inválida": "Operación exitosa";
+        assertEquals("Operación exitosa",respuesta);
+    }
 
+    @Test(expected = FileNotFoundException.class)
+    public void leerArchivoReportarYArchivarError(){
+        Try<String> resultado = importarInstrucciones("src/main/resources/ruta.txt")
+                .flatMap(instrucciones -> Try.of(()->reportarVariasEntregas(instrucciones))
+                .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reporte.txt")
+                ));
+        resultado.get();
     }
 
 
