@@ -1,12 +1,10 @@
-package serviciosDominio;
+package dominio.servicios;
 
-import sustantivos.Direccion;
-import static sustantivos.Direccion.*;
-import static serviciosDominio.ServicioPosicion.*;
-import sustantivos.Instruccion;
-import sustantivos.Posicion;
+import dominio.entidades.Direccion;
+import dominio.entidades.Instruccion;
+import dominio.entidades.Posicion;
 
-public class ServicioPosicion {
+public class ServidorPosicion {
 
     @FunctionalInterface
     private interface InterfacePosicion{
@@ -14,28 +12,28 @@ public class ServicioPosicion {
     }
 
     private static final InterfacePosicion
-            giroDerechaDesdeNorte = (x,y,d)-> new Posicion(x, y, E);
+            giroDerechaDesdeNorte = (x,y,d)-> new Posicion(x, y, Direccion.E);
 
     private static final InterfacePosicion
-            giroDerechaDesdeSur = (x,y,d)-> new Posicion(x, y, O);
+            giroDerechaDesdeSur = (x,y,d)-> new Posicion(x, y, Direccion.O);
 
     private static final InterfacePosicion
-            giroDerechaDesdeEste = (x,y,d)-> new Posicion(x, y, S);
+            giroDerechaDesdeEste = (x,y,d)-> new Posicion(x, y, Direccion.S);
 
     private static final InterfacePosicion
-            giroDerechaDesdeOeste = (x,y,d)-> new Posicion(x, y, N);
+            giroDerechaDesdeOeste = (x,y,d)-> new Posicion(x, y, Direccion.N);
 
     private static final InterfacePosicion
-            giroIzquierdaDesdeNorte = (x,y,d)-> new Posicion(x, y, O);
+            giroIzquierdaDesdeNorte = (x,y,d)-> new Posicion(x, y, Direccion.O);
 
     private static final InterfacePosicion
-            giroIzquierdaDesdeSur = (x,y,d)-> new Posicion(x, y, E);
+            giroIzquierdaDesdeSur = (x,y,d)-> new Posicion(x, y, Direccion.E);
 
     private static final InterfacePosicion
-            giroIzquierdaDesdeEste = (x,y,d)-> new Posicion(x, y, N);
+            giroIzquierdaDesdeEste = (x,y,d)-> new Posicion(x, y, Direccion.N);
 
     private static final InterfacePosicion
-            giroIzquierdaDesdeOeste = (x,y,d)-> new Posicion(x, y, S);
+            giroIzquierdaDesdeOeste = (x,y,d)-> new Posicion(x, y, Direccion.S);
 
     private static final InterfacePosicion
             adelanteMirandoNorte = (x,y,d)-> new Posicion(x, y+1, d);
@@ -94,5 +92,9 @@ public class ServicioPosicion {
                 break;
         }
         return resultado;
+    }
+
+    public static String posicionToString(Posicion p){
+        return "("+p.x+","+p.y+") Dirección "+ ServidorDireccion.direccionToString(p.d);
     }
 }
