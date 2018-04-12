@@ -1,17 +1,17 @@
-package serviciosDominio;
+package dominio.servicios;
 
-import static sustantivos.Direccion.*;
-import sustantivos.Dron;
-import sustantivos.Instruccion;
-import sustantivos.Posicion;
+import static dominio.servicios.ServidorPosicion.posicionToString;
+
+import dominio.entidades.Direccion;
+import dominio.entidades.Dron;
+import dominio.entidades.Instruccion;
+import dominio.entidades.Posicion;
+
 
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class ServicioEntregarAlmuerzos {
+public class DistribuidorAlmuerzos {
 
     private static Stream<Instruccion> hacerListaInstrucciones(String instrucciones){
         return instrucciones
@@ -20,33 +20,33 @@ public class ServicioEntregarAlmuerzos {
     }
 
     private static Dron enviarDronDesde0(String instrucciones){
-        return ServicioEntregarAlmuerzos.hacerListaInstrucciones(instrucciones)
+        return DistribuidorAlmuerzos.hacerListaInstrucciones(instrucciones)
                 .collect(new DronCollector());
     }
 
     private static Dron enviarDron(Dron dron, String instrucciones){
-        return ServicioEntregarAlmuerzos.hacerListaInstrucciones(instrucciones)
+        return DistribuidorAlmuerzos.hacerListaInstrucciones(instrucciones)
                 .collect(new DronCollector(dron));
     }
 
     public static String entregarPedido(String instrucciones){
-        Dron d = ServicioEntregarAlmuerzos.enviarDronDesde0(instrucciones);
-        return "("+d.p.x+","+d.p.y+") Dirección "+d.p.d;
+        Dron d = DistribuidorAlmuerzos.enviarDronDesde0(instrucciones);
+        return posicionToString(d.p);
     }
 
     public static String entregarPedido(Dron dron0, String instrucciones){
-        dron0 = ServicioEntregarAlmuerzos.hacerListaInstrucciones(instrucciones)
+        dron0 = DistribuidorAlmuerzos.hacerListaInstrucciones(instrucciones)
                 .collect(new DronCollector(dron0));
-        return "("+dron0.p.x+","+dron0.p.y+") Dirección "+dron0.p.d;
+        return posicionToString(dron0.p);
     };
 
     public static String reportarVariasEntregas(String[] entregas){
         final String[] reporte = {"== Reporte de entregas ==\n"};
-        final Dron[] dron = {new Dron(0, new Posicion(0, 0, N))};
+        final Dron[] dron = {new Dron(0, new Posicion(0, 0, Direccion.N))};
         Arrays.stream(entregas)
         .forEach(instruccion-> {
             dron[0] = enviarDron(dron[0], instruccion);
-            reporte[0] += "("+ dron[0].p.x+","+ dron[0].p.y+") Dirección "+ dron[0].p.d + "\n";
+            reporte[0] += posicionToString(dron[0].p) + "\n";
         });
         return reporte[0];
     };

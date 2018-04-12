@@ -1,10 +1,8 @@
-package serviciosDominio;
+package dominio.servicios;
 
 
-import com.sun.xml.internal.ws.api.message.ExceptionHasMessage;
-import com.sun.xml.internal.ws.api.message.Message;
-import sustantivos.Dron;
-import sustantivos.Instruccion;
+import dominio.entidades.Dron;
+import dominio.entidades.Instruccion;
 
 import java.util.EnumSet;
 import java.util.Set;
@@ -34,7 +32,7 @@ public class DronCollector implements Collector<Instruccion, Dron, Dron> {
     @Override
     public BiConsumer<Dron, Instruccion> accumulator() {
         return (Dron d, Instruccion i) -> {
-            d.p = ServicioPosicion.cambiarPosicion(d.p, i);
+            d.p = ServidorPosicion.cambiarPosicion(d.p, i);
         };
     }
 

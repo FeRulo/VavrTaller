@@ -1,4 +1,4 @@
-package sustantivos;
+package dominio.entidades;
 
 public class Limites {
     public String radio;
