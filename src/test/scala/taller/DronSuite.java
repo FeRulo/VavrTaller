@@ -21,7 +21,7 @@ public class DronSuite {
         String posicionFinal = ServicioEntregarAlmuerzos.entregarPedido(pedido);
 
         System.out.println("Test"+nameTest +" /Posición Final del dron: "+posicionFinal);
-        assertEquals("(-1,3) dirección O", posicionFinal);
+        assertEquals("(-1,3) Dirección Oeste", posicionFinal);
     }
 
     @Test
@@ -32,17 +32,19 @@ public class DronSuite {
         String posicionFinal = ServicioEntregarAlmuerzos.entregarPedido(dronPasado,pedido);
 
         System.out.println("Test"+nameTest +" /Posición Final del dron: "+posicionFinal);
-        assertEquals("(-4,5) dirección N", posicionFinal);
+        assertEquals("(-4,5) Dirección Norte", posicionFinal);
     }
 
     @Test
     public void entregarTresPedidos(){
-        String[] pedidos = {"AAAAI","AAAAI","AAAAD"};
+        String[] pedidos = {"AAAAI","AAAAI","AAAAI","AAAA"};
+        System.out.println(ServicioEntregarAlmuerzos.reportarVariasEntregas(pedidos));
         assertEquals(ServicioEntregarAlmuerzos.reportarVariasEntregas(pedidos),
                 "== Reporte de entregas ==\n" +
-                "(0,4) Dirección O\n" +
-                "(-4,4) Dirección S\n" +
-                "(-4,0) Dirección O\n");
+                "(0,4) Dirección Oeste\n" +
+                "(-4,4) Dirección Sur\n" +
+                "(-4,0) Dirección Este\n"+
+                "(0,0) Dirección Este\n");
     }
 
 
