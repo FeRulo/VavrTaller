@@ -1,0 +1,6 @@
+== Reporte de entregas ==
+(0,6) Dirección Oeste
+(-3,6) Dirección Oeste
+(-6,6) Dirección Sur
+(-7,3) Dirección Oeste
+(-13,2) Dirección Oeste

@@ -6,6 +6,7 @@ import dominio.entidades.Direccion;
 import dominio.entidades.Dron;
 import dominio.entidades.Instruccion;
 import dominio.entidades.Posicion;
+import io.vavr.collection.List;
 
 
 import java.util.Arrays;
@@ -40,11 +41,10 @@ public class DistribuidorAlmuerzos {
         return posicionToString(dron0.p);
     };
 
-    public static String reportarVariasEntregas(String[] entregas){
+    public static String reportarVariasEntregas(List<String> entregas){
         final String[] reporte = {"== Reporte de entregas ==\n"};
         final Dron[] dron = {new Dron(0, new Posicion(0, 0, Direccion.N))};
-        Arrays.stream(entregas)
-        .forEach(instruccion-> {
+        entregas.forEach(instruccion-> {
             dron[0] = enviarDron(dron[0], instruccion);
             reporte[0] += posicionToString(dron[0].p) + "\n";
         });
