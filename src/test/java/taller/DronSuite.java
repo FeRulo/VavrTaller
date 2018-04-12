@@ -4,15 +4,22 @@ import dominio.entidades.Direccion;
 import dominio.entidades.Dron;
 import dominio.entidades.Posicion;
 import io.vavr.collection.List;
+import io.vavr.control.Try;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.powermock.modules.junit4.PowerMockRunner;
 
+import static dominio.servicios.ServidorArchivos.exportarReporte;
+import static dominio.servicios.ServidorArchivos.importarInstrucciones;
+import static io.vavr.API.Success;
+import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.*;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 
 import static dominio.servicios.DistribuidorAlmuerzos.*;
 import dominio.entidades.*;
+
+import java.io.IOException;
 
 @RunWith(PowerMockRunner.class)
 //@PrepareForTest(fullyQualifiedNames = "DistribuidorAlmuerzos")
@@ -49,6 +56,41 @@ public class DronSuite {
                 "(-4,4) Dirección Sur\n" +
                 "(-4,0) Dirección Este\n"+
                 "(0,0) Dirección Este\n");
+    }
+
+    @Test
+    public void leerArchivo(){
+        Try<List<String>> instrucciones = importarInstrucciones("src/main/resources/rutas.txt");
+        assertEquals(instrucciones,
+                Success(List.of("AAAAAAAAAI",
+                "AIDAAID",
+                "AAAIDDDDD",
+                "AAADA",
+                "AAAAIADAA")));
+    }
+
+    @Test
+    public void leerArchivoYReportar(){
+        Try<List<String>> instrucciones = importarInstrucciones("src/main/resources/rutas.txt");
+        Try<String> reporte = instrucciones.flatMap(l->Try.of(()->reportarVariasEntregas(l)));
+        System.out.println(reporte);
+        assertEquals(reporte, Success("== Reporte de entregas ==\n" +
+                "(0,9) Dirección Oeste\n" +
+                "(-3,9) Dirección Oeste\n" +
+                "(-6,9) Dirección Oeste\n" +
+                "(-9,10) Dirección Norte\n" +
+                "(-10,16) Dirección Norte\n"
+                ));
+
+    }
+
+    @Test
+    public void leerArchivoReportarYArchivar(){
+        Try<String> resultado = importarInstrucciones("src/main/resources/rutas.txt")
+                .flatMap(instrucciones -> Try.of(()->reportarVariasEntregas(instrucciones))
+                .flatMap(reporte ->Try.of(()->exportarReporte(reporte,"src/main/resources/reporte.txt"))));
+        assertEquals(Success("hola"),resultado);
+
     }
 
 

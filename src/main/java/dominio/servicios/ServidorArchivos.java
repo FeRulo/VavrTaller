@@ -1,22 +1,21 @@
 package dominio.servicios;
 
 import io.vavr.collection.List;
+import io.vavr.control.Try;
 
 import java.io.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ServidorArchivos {
-    public static List<String> importarInstrucciones(String ruta) throws FileNotFoundException, IOException {
-        List<String> instrucciones = List.empty();
+    public static Try<List<String>> importarInstrucciones(String ruta){
         File archivo = new File(ruta);
-        FileReader fr = new FileReader(archivo);
-        BufferedReader br = new BufferedReader(fr);
-        String linea;
-        while ((linea = br.readLine()) != null)
-            instrucciones = instrucciones.append(linea);
-        return instrucciones;
+        return Try.of(()->new FileReader(archivo))
+                .flatMap(f->Try.of(()->new BufferedReader(f))
+                .flatMap(br->Try.of(()->List.ofAll(br.lines()))));
     }
 
-    public static void exportarReporte(String reporte, String ruta) throws IOException{
+    public static String exportarReporte(String reporte, String ruta) throws IOException{
         File archivo = new File(ruta);
         BufferedWriter bw;
         if (archivo.exists()) {
@@ -28,6 +27,7 @@ public class ServidorArchivos {
             bw.write(reporte);
         }
         bw.close();
+        return "hola";
     }
 
 }
