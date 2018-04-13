@@ -8,19 +8,27 @@ import io.vavr.Tuple;
 import io.vavr.collection.List;
 import io.vavr.control.Either;
 import static dominio.servicios.ValidadorRutas.*;
+import static io.vavr.API.*;
+
 import java.util.stream.Stream;
 
 import static dominio.servicios.ServidorPosicion.posicionToString;
 
 public class DistribuidorAlmuerzosVavr extends DistribuidorAlmuerzos{
-    public static Either<String, List<Either<String,Posicion>>>  reportarVariasEntregas2(List<String> rutas){
-        final String reporte = "== Reporte de entregas ==\n";
-        final Dron[] dron = {new Dron(0, new Posicion(0, 0, Direccion.N))};
+
+    public static String reportarEntregasDron2(Dron dron, List<String> entregas){
+        final String[] reporte = {"== Reporte de entregas ==\n"};
+        generarListaPosicionesFinales(dron, entregas).forEach(posicion-> {
+            reporte[0] += posicionToString(posicion) + "\n";
+        });
+        return reporte[0];
+    };
+
+    public static Either<String, List<Either<String,Posicion>>>  generarListaPosicionesFinales2(Dron dron, List<String> rutas){
         return validarCantidadRutas(3, rutas)
                 .map(ls-> ls
-                .map(ruta->{
-                        dron[0] = enviarDron(dron[0], ruta);
-                        return validarPosicionPorMaxCuadras(10,dron[0].p);
-                    }));
+                        .map(ruta -> validarPosicionPorMaxCuadras(10,enviarDron(dron, "DDDD").p)
+                                .flatMap(p-> validarPosicionPorMaxCuadras(10,enviarDron(dron, ruta).p))
+                        ));
     }
 }

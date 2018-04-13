@@ -4,7 +4,7 @@ import dominio.entidades.Direccion;
 import dominio.entidades.Dron;
 import dominio.entidades.Posicion;
 import dominio.servicios.DistribuidorAlmuerzos;
-import dominio.servicios.DistribuidorAlmuerzosVavr;
+import static dominio.servicios.DistribuidorAlmuerzosVavr.*;
 import io.vavr.collection.List;
 import io.vavr.control.Either;
 import io.vavr.control.Try;
@@ -14,6 +14,10 @@ import org.powermock.modules.junit4.PowerMockRunner;
 
 import static dominio.servicios.ServidorArchivos.exportarReporte;
 import static dominio.servicios.ServidorArchivos.importarInstrucciones;
+
+import static dominio.servicios.ServidorPosicion.posicionToString;
+
+import static dominio.entidades.Posicion.*;
 import static io.vavr.API.Success;
 import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.*;
@@ -52,7 +56,7 @@ public class DronSuite {
     public void entregarTresPedidos(){
         List<String> pedidos = List.of("AAAAI","AAAAI","AAAAI","AAAA");
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
-        assertEquals(reportarVariasEntregas(dron,pedidos),
+        assertEquals(reportarEntregasDron(dron,pedidos),
                 "== Reporte de entregas ==\n" +
                 "(0,4) Dirección Oeste\n" +
                 "(-4,4) Dirección Sur\n" +
@@ -75,7 +79,7 @@ public class DronSuite {
     public void leerArchivoYReportar(){
         Try<List<String>> instrucciones = importarInstrucciones("src/main/resources/rutas.txt");
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
-        Try<String> reporte = instrucciones.flatMap(l->Try.of(()->reportarVariasEntregas(dron,l)));
+        Try<String> reporte = instrucciones.flatMap(l->Try.of(()->reportarEntregasDron(dron,l)));
         System.out.println(reporte);
         assertEquals(reporte, Success("== Reporte de entregas ==\n" +
                 "(0,9) Dirección Oeste\n" +
@@ -90,7 +94,7 @@ public class DronSuite {
     public void leerArchivoReportarYArchivar(){
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
         Try<String> resultado = importarInstrucciones("src/main/resources/rutas.txt")
-                .flatMap(instrucciones -> Try.of(()->reportarVariasEntregas(dron, instrucciones))
+                .flatMap(instrucciones -> Try.of(()->reportarEntregasDron(dron, instrucciones))
                         .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reporte.txt")
                         ));
         String respuesta = (resultado.isFailure())? "Especificación de ruta inválida": "Operación exitosa";
@@ -101,7 +105,7 @@ public class DronSuite {
     public void leerArchivoReportarYArchivarError(){
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
         Try<String> resultado = importarInstrucciones("src/main/resources/ruta.txt")
-                .flatMap(instrucciones -> Try.of(()->reportarVariasEntregas(dron, instrucciones))
+                .flatMap(instrucciones -> Try.of(()->reportarEntregasDron(dron, instrucciones))
                 .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reporte.txt")
                 ));
         resultado.get();
@@ -109,17 +113,76 @@ public class DronSuite {
 
     @Test
     public void validacionFallidaEntregarTresPedidos(){
-
         List<String> pedidos = List.of("AAAAI","AAAAI","AAAAI","AAAAI");
-        Either<String, List<Either<String,Posicion>>> reporte = DistribuidorAlmuerzosVavr.reportarVariasEntregas2(pedidos);
-        System.out.println(reporte.getLeft());
-        assertTrue(reporte.isLeft());
+        Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
+        Either<String, List<Either<String,Posicion>>> reporte = generarListaPosicionesFinales2(dron, pedidos);
+        String retornoConsola= reporte.isLeft()? reporte.getLeft(): "";
+        System.out.println(retornoConsola);
+        assertEquals("El Número de Rutas Excede la capacidad del drón", retornoConsola);
     }
 
     @Test
     public void validacionEntregarTresPedidos(){
+        List<String> pedidos = List.of("AAAAI","AAAAD","AAAAI");
+        Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
+        Either<String, List<Either<String,Posicion>>> listaPosiciones = generarListaPosicionesFinales2(dron, pedidos);
+        String retorno = "";
+        if(listaPosiciones.isLeft()){
+            retorno = listaPosiciones.getLeft();
+        }
+        else{
+            final String[] reporte = {"== Reporte de entregas ==\n"};
+            List<Either<String,String>> l = listaPosiciones
+                    .get()//Lista de eithers
+                    .map(ePosicion -> ePosicion
+                            .map(posicion -> {
+                                        reporte[0] += posicionToString(posicion) + "\n";
+                                        return posicionToString(posicion);
+                                }
+                            )
+                    );
+            retorno = reporte[0];
+        }
+        assertEquals("== Reporte de entregas ==\n" +
+                "(0,4) Dirección Oeste\n" +
+                "(-4,4) Dirección Norte\n" +
+                "(-4,8) Dirección Oeste\n" ,retorno);
+    }
+    @Test
+    public void validacionEntregarTresPedidosSaliendoseLímites(){
+        List<String> pedidos = List.of("AAAAI","AAAAD","AAAAAAAAI");
+        Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
+        Either<String, List<Either<String,Posicion>>> listaPosiciones = generarListaPosicionesFinales2(dron, pedidos);
+        String retorno = "";
+        if(listaPosiciones.isLeft()){
+            retorno = listaPosiciones.getLeft();
+        }
+        else{
+            final String[] reporte = {"== Reporte de entregas ==\n"};
+            List<Either<String,String>> l = listaPosiciones
+                    .get()//Lista de eithers
+                    .map(ePosicion -> ePosicion
+                            .map(posicion -> {
+                                        reporte[0] += posicionToString(posicion) + "\n";
+                                        return posicionToString(posicion);
+                                    }
+                            )
+                            .mapLeft(error -> {
+                                        reporte[0] += error + "\n";
+                                        return error;
+                                    }
+                            )
+                    );
+            retorno = reporte[0];
+        }
+        System.out.println(retorno);
+    }
+
+    @Test
+    public void validacionEntregarTresPedidos2(){
         List<String> pedidos = List.of("AAAAAAAAAAAAAAAI","AAAAD","AAAAAAAAI");
-        Either<String, List<Either<String,Posicion>>> reporte = DistribuidorAlmuerzosVavr.reportarVariasEntregas2(pedidos);
+        Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
+        Either<String, List<Either<String,Posicion>>> reporte = generarListaPosicionesFinales2(dron, pedidos);
         System.out.println(reporte.get());
         assertTrue(reporte.isRight());
     }

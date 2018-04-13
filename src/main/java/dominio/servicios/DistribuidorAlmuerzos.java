@@ -41,14 +41,15 @@ public class DistribuidorAlmuerzos {
                 .collect(new DronCollector(dron0));
         return posicionToString(dron0.p);
     };
-    protected  static String aumentarReporte(Dron dron, String instruccion){
-        return posicionToString(enviarDron(dron, instruccion).p);
+
+    public static List<Posicion> generarListaPosicionesFinales(Dron dron, List<String> entregas){
+        return entregas.map(instruccion-> enviarDron(dron, instruccion).p);
     }
 
-    public static String reportarVariasEntregas(Dron dron, List<String> entregas){
+    public static String reportarEntregasDron(Dron dron, List<String> entregas){
         final String[] reporte = {"== Reporte de entregas ==\n"};
-        entregas.toStream().forEach(instruccion-> {
-            reporte[0] += aumentarReporte(dron,instruccion)  + "\n";
+        generarListaPosicionesFinales(dron, entregas).forEach(posicion-> {
+            reporte[0] += posicionToString(posicion) + "\n";
         });
         return reporte[0];
     };
