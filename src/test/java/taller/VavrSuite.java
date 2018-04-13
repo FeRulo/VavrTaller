@@ -25,7 +25,7 @@ public class VavrSuite {
     public void validacionFallidaEntregarTresPedidos(){
         List<String> pedidos = List.of("AAAAI","AAAAI","AAAAI","AAAAI");
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
-        String reporte = reportarEntregasDron2(dron, pedidos);
+        String reporte = reportarEntregasDronVavr(dron, pedidos);
         assertEquals("== Reporte de entregas ==\n" +
                 "El Número de Rutas Excede la capacidad del drón\n",reporte);
     }
@@ -34,7 +34,7 @@ public class VavrSuite {
     public void validacionEntregarTresPedidos(){
         List<String> pedidos = List.of("AAAAI","AAAAD","AAAAI");
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
-        String reporte = reportarEntregasDron2(dron, pedidos);
+        String reporte = reportarEntregasDronVavr(dron, pedidos);
         assertEquals("== Reporte de entregas ==\n" +
                 "(0,4) Dirección Oeste\n" +
                 "(-4,4) Dirección Norte\n" +
@@ -44,7 +44,7 @@ public class VavrSuite {
     public void validacionEntregarTresPedidosSaliendoseLímites(){
         List<String> pedidos = List.of("AAAAI","AAAAD","AAAAAAAAI");
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
-        String reporte = reportarEntregasDron2(dron, pedidos);
+        String reporte = reportarEntregasDronVavr(dron, pedidos);
         assertEquals("== Reporte de entregas ==\n" +
                 "(0,4) Dirección Oeste\n" +
                 "(-4,4) Dirección Norte\n" +
@@ -56,7 +56,7 @@ public class VavrSuite {
     public void validacionEntregarPrimerPedidoError(){
         List<String> pedidos = List.of("AAAAAAAAAAAAAAAI","AAAAD","AAAAAAAAI");
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
-        String reporte = reportarEntregasDron2(dron, pedidos);
+        String reporte = reportarEntregasDronVavr(dron, pedidos);
         assertEquals("== Reporte de entregas ==\n" +
                 "El drón no se ha movido por: \n" +
                 "\t-Posición resultante:[(0,15) Dirección Oeste] afuera del límite de cuadras\n",reporte);
@@ -66,7 +66,7 @@ public class VavrSuite {
     public void validacionEntregarNingúnPedido(){
         List<String> pedidos = List.empty();
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
-        String reporte = reportarEntregasDron2(dron, pedidos);
+        String reporte = reportarEntregasDronVavr(dron, pedidos);
         assertEquals("== Reporte de entregas ==\n" +
                 "No hay rutas que ejecutar\n",reporte);
     }
@@ -86,7 +86,7 @@ public class VavrSuite {
     public void leerArchivoYReportar(){
         Try<List<String>> instrucciones = importarInstrucciones("src/main/resources/rutas.txt");
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
-        Try<String> reporte = instrucciones.flatMap(l->Try.of(()->reportarEntregasDron2(dron,l)));
+        Try<String> reporte = instrucciones.flatMap(l->Try.of(()->reportarEntregasDronVavr(dron,l)));
         assertEquals(reporte, Success("== Reporte de entregas ==\n" +
                         "El Número de Rutas Excede la capacidad del drón\n"
                 ));
@@ -96,7 +96,7 @@ public class VavrSuite {
     public void leerArchivoReportarYArchivar(){
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
         Try<String> resultado = importarInstrucciones("src/main/resources/rutas.txt")
-                .flatMap(instrucciones -> Try.of(()->reportarEntregasDron2(dron, instrucciones))
+                .flatMap(instrucciones -> Try.of(()->reportarEntregasDronVavr(dron, instrucciones))
                         .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reporte.txt")
                         ));
         String respuesta = (resultado.isFailure())? "Especificación de ruta inválida": "Operación exitosa";
@@ -107,7 +107,7 @@ public class VavrSuite {
     public void leerArchivoReportarYArchivarError(){
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
         Try<String> resultado = importarInstrucciones("src/main/resources/ruta.txt")
-                .flatMap(instrucciones -> Try.of(()->reportarEntregasDron2(dron, instrucciones))
+                .flatMap(instrucciones -> Try.of(()->reportarEntregasDronVavr(dron, instrucciones))
                 .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reporte.txt")
                 ));
         resultado.get();

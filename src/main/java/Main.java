@@ -14,7 +14,7 @@ public class Main {
     public static void main(String [] arg) {
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
         Try<String> resultado = importarInstrucciones("src/main/resources/rutas.txt")
-                .map(instrucciones -> reportarEntregasDron2(dron,instrucciones))
+                .map(instrucciones -> reportarEntregasDronVavr(dron,instrucciones))
                 .flatMap(reporte -> exportarReporte(reporte,"src/main/resources/reporte.txt"));
 
         String respuesta = resultado.isFailure()? "Especificación de ruta inválida": "Operación exitosa";
