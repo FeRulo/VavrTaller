@@ -3,7 +3,10 @@ package taller;
 import dominio.entidades.Direccion;
 import dominio.entidades.Dron;
 import dominio.entidades.Posicion;
+import dominio.servicios.DistribuidorAlmuerzos;
+import dominio.servicios.DistribuidorAlmuerzosVavr;
 import io.vavr.collection.List;
+import io.vavr.control.Either;
 import io.vavr.control.Try;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -80,7 +83,6 @@ public class DronSuite {
                 "(-9,10) Dirección Norte\n" +
                 "(-10,16) Dirección Norte\n"
                 ));
-
     }
 
     @Test
@@ -101,6 +103,22 @@ public class DronSuite {
                 .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reporte.txt")
                 ));
         resultado.get();
+    }
+
+    @Test
+    public void validacionFallidaEntregarTresPedidos(){
+        List<String> pedidos = List.of("AAAAI","AAAAI","AAAAI","AAAAI");
+        Either<String, List<Either<String,Posicion>>> reporte = DistribuidorAlmuerzosVavr.reportarVariasEntregas2(pedidos);
+        System.out.println(reporte.getLeft());
+        assertTrue(reporte.isLeft());
+    }
+
+    @Test
+    public void validacionEntregarTresPedidos(){
+        List<String> pedidos = List.of("AAAAI","AAAAI","AAAAI");
+        Either<String, List<Either<String,Posicion>>> reporte = DistribuidorAlmuerzosVavr.reportarVariasEntregas2(pedidos);
+        System.out.println(reporte.toString());
+//        assertTrue(reporte.isRight());
     }
 
 

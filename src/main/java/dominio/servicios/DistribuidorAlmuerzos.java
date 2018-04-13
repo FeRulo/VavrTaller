@@ -7,6 +7,7 @@ import dominio.entidades.Dron;
 import dominio.entidades.Instruccion;
 import dominio.entidades.Posicion;
 import io.vavr.collection.List;
+import io.vavr.control.Either;
 
 
 import java.util.Arrays;
@@ -25,7 +26,7 @@ public class DistribuidorAlmuerzos {
                 .collect(new DronCollector());
     }
 
-    private static Dron enviarDron(Dron dron, String instrucciones){
+    protected static Dron enviarDron(Dron dron, String instrucciones){
         return DistribuidorAlmuerzos.hacerListaInstrucciones(instrucciones)
                 .collect(new DronCollector(dron));
     }

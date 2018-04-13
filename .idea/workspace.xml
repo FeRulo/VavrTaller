@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzos.java" line="40" mnemonic="8" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzos.java" line="41" mnemonic="8" />
     <bookmark url="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorArchivos.java" line="5" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="898c5201-78d3-4c75-a4b6-3404c4ce39f7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/servicios/DronCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/servicios/DronCollector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorArchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorArchivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/servicios/ValidadorRutas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/servicios/ValidadorRutas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/taller/DronSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/taller/DronSuite.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,65 +32,11 @@
       <file leaf-file-name="DronSuite.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/taller/DronSuite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="81" column="19" lean-forward="true" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
+            <state relative-caret-position="279">
+              <caret line="119" column="45" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServidorPosicion.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorPosicion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServidorArchivos.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorArchivos.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValidadorRutas.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ValidadorRutas.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServidorDireccion.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorDireccion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -99,17 +44,35 @@
       <file leaf-file-name="DistribuidorAlmuerzos.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="66" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="66" />
+            <state relative-caret-position="240">
+              <caret line="49" column="53" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reporte.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/reporte.txt">
+      <file leaf-file-name="DistribuidorAlmuerzosVavr.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="150">
+              <caret line="16" column="75" selection-start-line="16" selection-start-column="75" selection-end-line="16" selection-end-column="75" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidadorRutas.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ValidadorRutas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,6 +86,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/main/java/dominio/servicios</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -157,12 +125,14 @@
         <option value="$PROJECT_DIR$/src/main/java/serviciosDominio/ServidorPosicion.java" />
         <option value="$PROJECT_DIR$/src/main/java/serviciosDominio/DistribuidorAlmuerzos.java" />
         <option value="$PROJECT_DIR$/src/main/resources/archivo.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzos.java" />
         <option value="$PROJECT_DIR$/src/main/resources/rutas.txt" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/DronCollector.java" />
-        <option value="$PROJECT_DIR$/src/test/java/taller/DronSuite.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorArchivos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java" />
+        <option value="$PROJECT_DIR$/src/test/java/taller/DronSuite.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/ValidadorRutas.java" />
       </list>
     </option>
   </component>
@@ -172,10 +142,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="716" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="67" />
     <option name="y" value="25" />
-    <option name="width" value="650" />
+    <option name="width" value="1154" />
     <option name="height" value="743" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -275,6 +245,9 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ejemplos" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dominio.servicios" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java" />
@@ -295,7 +268,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.DronSuite.validacionFallidaEntregarTresPedidos">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="root" />
@@ -304,7 +277,7 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="DronSuite.leerArchivo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DronSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="root" />
       <extension name="coverage">
         <pattern>
@@ -316,31 +289,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="taller" />
       <option name="MAIN_CLASS_NAME" value="taller.DronSuite" />
-      <option name="METHOD_NAME" value="leerArchivo" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="DronSuite.leerArchivoReportarYArchivar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="root" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="taller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="taller" />
-      <option name="MAIN_CLASS_NAME" value="taller.DronSuite" />
-      <option name="METHOD_NAME" value="leerArchivoReportarYArchivar" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -373,7 +323,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="DronSuite.leerArchivoYReportar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DronSuite.validacionEntregarTresPedidos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="root" />
       <extension name="coverage">
         <pattern>
@@ -385,7 +335,30 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="taller" />
       <option name="MAIN_CLASS_NAME" value="taller.DronSuite" />
-      <option name="METHOD_NAME" value="leerArchivoYReportar" />
+      <option name="METHOD_NAME" value="validacionEntregarTresPedidos" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="DronSuite.validacionFallidaEntregarTresPedidos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="root" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="taller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="taller" />
+      <option name="MAIN_CLASS_NAME" value="taller.DronSuite" />
+      <option name="METHOD_NAME" value="validacionFallidaEntregarTresPedidos" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -446,18 +419,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.DronSuite.leerArchivo" />
-      <item itemvalue="JUnit.DronSuite.leerArchivoYReportar" />
-      <item itemvalue="JUnit.DronSuite.leerArchivoReportarYArchivar" />
       <item itemvalue="JUnit.DronSuite.leerArchivoReportarYArchivarError" />
+      <item itemvalue="JUnit.DronSuite.validacionEntregarTresPedidos" />
+      <item itemvalue="JUnit.DronSuite" />
+      <item itemvalue="JUnit.DronSuite.validacionFallidaEntregarTresPedidos" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DronSuite.validacionFallidaEntregarTresPedidos" />
+        <item itemvalue="JUnit.DronSuite.validacionEntregarTresPedidos" />
+        <item itemvalue="JUnit.DronSuite" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.DronSuite.leerArchivoReportarYArchivarError" />
-        <item itemvalue="JUnit.DronSuite.leerArchivoReportarYArchivar" />
-        <item itemvalue="JUnit.DronSuite.leerArchivoYReportar" />
-        <item itemvalue="JUnit.DronSuite.leerArchivo" />
       </list>
     </recent_temporary>
   </component>
@@ -513,39 +486,40 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DronSuite_leerArchivoReportarYArchivarError - 2018.04.12 at 16h 11m 51s.xml">
-      <configuration name="DronSuite.leerArchivoReportarYArchivarError" configurationId="JUnit" />
+    <history-entry file="DronSuite_validacionEntregarTresPedidos - 2018.04.12 at 20h 49m 03s.xml">
+      <configuration name="DronSuite.validacionEntregarTresPedidos" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DronSuite_leerArchivoReportarYArchivarError - 2018.04.12 at 16h 15m 53s.xml">
-      <configuration name="DronSuite.leerArchivoReportarYArchivarError" configurationId="JUnit" />
+    <history-entry file="DronSuite_validacionEntregarTresPedidos - 2018.04.12 at 20h 49m 55s.xml">
+      <configuration name="DronSuite.validacionEntregarTresPedidos" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DronSuite_leerArchivoReportarYArchivar - 2018.04.12 at 16h 17m 43s.xml">
-      <configuration name="DronSuite.leerArchivoReportarYArchivar" configurationId="JUnit" />
+    <history-entry file="DronSuite_validacionEntregarTresPedidos - 2018.04.12 at 20h 50m 11s.xml">
+      <configuration name="DronSuite.validacionEntregarTresPedidos" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DronSuite_leerArchivoReportarYArchivarError - 2018.04.12 at 16h 17m 47s.xml">
-      <configuration name="DronSuite.leerArchivoReportarYArchivarError" configurationId="JUnit" />
+    <history-entry file="DronSuite_validacionEntregarTresPedidos - 2018.04.12 at 20h 50m 24s.xml">
+      <configuration name="DronSuite.validacionEntregarTresPedidos" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DronSuite_leerArchivoReportarYArchivar - 2018.04.12 at 17h 55m 53s.xml">
-      <configuration name="DronSuite.leerArchivoReportarYArchivar" configurationId="JUnit" />
+    <history-entry file="DronSuite - 2018.04.12 at 20h 50m 53s.xml">
+      <configuration name="DronSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DronSuite_leerArchivoReportarYArchivarError - 2018.04.12 at 17h 56m 07s.xml">
-      <configuration name="DronSuite.leerArchivoReportarYArchivarError" configurationId="JUnit" />
+    <history-entry file="DronSuite_validacionEntregarTresPedidos - 2018.04.12 at 20h 51m 04s.xml">
+      <configuration name="DronSuite.validacionEntregarTresPedidos" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DronSuite_leerArchivoReportarYArchivar - 2018.04.12 at 17h 56m 23s.xml">
-      <configuration name="DronSuite.leerArchivoReportarYArchivar" configurationId="JUnit" />
+    <history-entry file="DronSuite_validacionEntregarTresPedidos - 2018.04.12 at 20h 51m 16s.xml">
+      <configuration name="DronSuite.validacionEntregarTresPedidos" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DronSuite_leerArchivoReportarYArchivarError - 2018.04.12 at 17h 56m 36s.xml">
-      <configuration name="DronSuite.leerArchivoReportarYArchivarError" configurationId="JUnit" />
+    <history-entry file="DronSuite_validacionFallidaEntregarTresPedidos - 2018.04.12 at 20h 51m 43s.xml">
+      <configuration name="DronSuite.validacionFallidaEntregarTresPedidos" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DronSuite_leerArchivoReportarYArchivarError - 2018.04.12 at 17h 57m 43s.xml">
-      <configuration name="DronSuite.leerArchivoReportarYArchivarError" configurationId="JUnit" />
+    <history-entry file="DronSuite_validacionEntregarTresPedidos - 2018.04.12 at 20h 53m 53s.xml">
+      <configuration name="DronSuite.validacionEntregarTresPedidos" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DronSuite_leerArchivoReportarYArchivarError - 2018.04.12 at 17h 58m 47s.xml">
-      <configuration name="DronSuite.leerArchivoReportarYArchivarError" configurationId="JUnit" />
+    <history-entry file="DronSuite_validacionEntregarTresPedidos - 2018.04.12 at 20h 54m 35s.xml">
+      <configuration name="DronSuite.validacionEntregarTresPedidos" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <frame x="67" y="25" width="1154" height="743" extended-state="4" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -556,12 +530,12 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32960895" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295082" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30965683" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20938627" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" weight="0.32786885" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -637,17 +611,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/enunciado.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dominio/entidades/Posicion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -847,13 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="66" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/io.vavr/vavr/srcs/vavr-0.9.2-sources.jar!/io/vavr/control/Try.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="801">
@@ -883,6 +843,16 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/report.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorArchivos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorPosicion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -903,27 +873,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ValidadorRutas.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/taller/DronSuite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="81" column="19" lean-forward="true" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
+        <state relative-caret-position="150">
+          <caret line="16" column="75" selection-start-line="16" selection-start-column="75" selection-end-line="16" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorArchivos.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        <state relative-caret-position="240">
+          <caret line="49" column="53" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/taller/DronSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="119" column="45" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ValidadorRutas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
