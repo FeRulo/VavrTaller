@@ -6,9 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="898c5201-78d3-4c75-a4b6-3404c4ce39f7" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/entidades/Dron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/entidades/Dron.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/reporte.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/reporte.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rutas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rutas.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/taller/Taller1Suite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/taller/Taller1Suite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/taller/VavrSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/taller/VavrSuite.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,11 +31,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DistribuidorAlmuerzosVavr.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Taller1Suite.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/taller/Taller1Suite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="47" column="68" selection-start-line="47" selection-start-column="68" selection-end-line="47" selection-end-column="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VavrSuite.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/taller/VavrSuite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="60" column="51" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DistribuidorAlmuerzosVavr.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+            <state relative-caret-position="130">
+              <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="78" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dron.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/entidades/Dron.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/reporte.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -53,7 +98,19 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/rutas.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidadorRutas.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ValidadorRutas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,6 +132,10 @@
       <find>generarListaPosicionesFinales2</find>
       <find>reporte.txt</find>
       <find>validarPosicionPorMaxCuadras</find>
+      <find>capacidad</find>
+      <find>validarCantidadRutas</find>
+      <find>new Dron(0, new Posicion(0,0,Direccion.N))</find>
+      <find>new Dron(</find>
     </findStrings>
     <replaceStrings>
       <replace>generarListaPosicionesFinalesVavr</replace>
@@ -83,6 +144,7 @@
       <replace>reportePruebas</replace>
       <replace>reportePruebas.txt</replace>
       <replace>validarPosicionPorCuadrasMaxi</replace>
+      <replace>new Dron(0, new Posicion(0,0,Direccion.N),3)</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/java/dominio/servicios</dir>
@@ -127,14 +189,15 @@
         <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/ReporteCollector.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzos.java" />
         <option value="$PROJECT_DIR$/src/test/java/taller/DronSuite.java" />
-        <option value="$PROJECT_DIR$/src/test/java/taller/Taller1Suite.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/ValidadorRutas.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/entidades/Limites.java" />
         <option value="$PROJECT_DIR$/src/main/resources/rutasPruebas.txt" />
-        <option value="$PROJECT_DIR$/src/test/java/taller/VavrSuite.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java" />
         <option value="$PROJECT_DIR$/src/main/resources/rutas.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/dominio/entidades/Dron.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/test/java/taller/Taller1Suite.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/ValidadorRutas.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java" />
+        <option value="$PROJECT_DIR$/src/test/java/taller/VavrSuite.java" />
       </list>
     </option>
   </component>
@@ -158,7 +221,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -242,8 +307,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,7 +343,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.VavrSuite">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="root" />
@@ -438,10 +501,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.VavrSuite" />
-        <item itemvalue="JUnit.VavrSuite.validacionEntregarPrimerPedidoError" />
         <item itemvalue="JUnit.VavrSuite.validacionEntregarNingúnPedido" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.VavrSuite.validacionEntregarPrimerPedidoError" />
         <item itemvalue="JUnit.VavrSuite.validacionEntregarTresPedidos3" />
       </list>
     </recent_temporary>
@@ -498,34 +561,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VavrSuite_validacionEntregarPrimerPedidoError - 2018.04.13 at 16h 42m 12s.xml">
-      <configuration name="VavrSuite.validacionEntregarPrimerPedidoError" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VavrSuite_validacionEntregarPrimerPedidoError - 2018.04.13 at 16h 45m 47s.xml">
-      <configuration name="VavrSuite.validacionEntregarPrimerPedidoError" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VavrSuite_validacionEntregarPrimerPedidoError - 2018.04.13 at 16h 47m 05s.xml">
-      <configuration name="VavrSuite.validacionEntregarPrimerPedidoError" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VavrSuite_validacionEntregarPrimerPedidoError - 2018.04.13 at 16h 47m 23s.xml">
-      <configuration name="VavrSuite.validacionEntregarPrimerPedidoError" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VavrSuite_validacionEntregarPrimerPedidoError - 2018.04.13 at 16h 56m 18s.xml">
-      <configuration name="VavrSuite.validacionEntregarPrimerPedidoError" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VavrSuite_validacionEntregarPrimerPedidoError - 2018.04.13 at 16h 57m 08s.xml">
-      <configuration name="VavrSuite.validacionEntregarPrimerPedidoError" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VavrSuite_validacionEntregarPrimerPedidoError - 2018.04.13 at 16h 57m 42s.xml">
-      <configuration name="VavrSuite.validacionEntregarPrimerPedidoError" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VavrSuite - 2018.04.13 at 17h 13m 46s.xml">
+    <history-entry file="VavrSuite - 2018.04.13 at 17h 40m 03s.xml">
       <configuration name="VavrSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VavrSuite - 2018.04.13 at 17h 21m 37s.xml">
+    <history-entry file="VavrSuite - 2018.04.13 at 17h 40m 56s.xml">
       <configuration name="VavrSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VavrSuite - 2018.04.13 at 17h 22m 01s.xml">
+    <history-entry file="VavrSuite - 2018.04.13 at 17h 41m 13s.xml">
+      <configuration name="VavrSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VavrSuite - 2018.04.13 at 17h 41m 58s.xml">
+      <configuration name="VavrSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VavrSuite - 2018.04.13 at 17h 42m 38s.xml">
+      <configuration name="VavrSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VavrSuite - 2018.04.13 at 17h 50m 20s.xml">
+      <configuration name="VavrSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VavrSuite - 2018.04.13 at 17h 51m 21s.xml">
+      <configuration name="VavrSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VavrSuite - 2018.04.13 at 17h 51m 50s.xml">
+      <configuration name="VavrSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VavrSuite - 2018.04.13 at 17h 54m 54s.xml">
+      <configuration name="VavrSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VavrSuite - 2018.04.13 at 17h 55m 46s.xml">
       <configuration name="VavrSuite" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -541,57 +604,34 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32960895" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295082" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32083002" />
-      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" weight="0.32786885" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" weight="0.32786885" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="sbt" order="3" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32786885" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3295082" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27214685" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.27693537" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" weight="0.32786885" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32786885" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32786885" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27214685" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -599,9 +639,9 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="8" weight="0.32786885" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -611,7 +651,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="sbt" order="7" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32786885" />
+      <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Maven Projects" order="8" />
@@ -627,6 +667,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/rutas.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/ejemplos/EnumSuite.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/taller/Taller1Suite.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -707,13 +754,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/scala/ejemplos/EjemplosSuite.java" />
     <entry file="file://$PROJECT_DIR$/src/test/scala/ejemplos/MockitoSuite.java" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/ejemplos/ServiciosDominio.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/entidades/Dron.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dominio/entidades/Instruccion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -763,21 +803,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/report.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ReporteCollector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ReporteCollector.java" />
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -796,9 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="268" selection-start-line="268" selection-end-line="268" />
-          <folding>
-            <element signature="e#7914#7915#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -826,16 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/taller/Taller1Suite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
@@ -850,33 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/taller/VavrSuite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-410">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ValidadorRutas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -910,24 +896,68 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/rutas.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/entidades/Dron.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/reporte.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ValidadorRutas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+        <state relative-caret-position="130">
+          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/taller/Taller1Suite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="47" column="68" selection-start-line="47" selection-start-column="68" selection-end-line="47" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/taller/VavrSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="60" column="51" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
         </state>
       </provider>
     </entry>

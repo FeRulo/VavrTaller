@@ -41,11 +41,11 @@ public class DistribuidorAlmuerzosVavr extends DistribuidorAlmuerzos{
     };
 
     public static Either<String, List<Either<String,Posicion>>>  generarListaPosicionesFinalesVavr(Dron dron, List<String> rutas){
-        return validarCantidadRutas(3, rutas)
+        return validarCantidadRutas(dron.capacidad, rutas)
                 .map(ls-> ls
-                        .map(ruta -> Right(new Posicion())
-                                .mapLeft(error->error+"")
-                                .flatMap(p-> validarPosicionPorMaxCuadras(Limites.radio,enviarDron(dron, ruta).p))
+                        .map(ruta -> validarPosicionPorMaxCuadras(Limites.radio,dron.p)
+                                .flatMap(pos-> validarPosicionPorMaxCuadras(Limites.radio,enviarDron(dron, ruta).p))
+
                         )
                         .distinct()
                 );

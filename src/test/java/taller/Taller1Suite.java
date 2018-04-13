@@ -45,7 +45,7 @@ public class Taller1Suite {
     public void entregarPedidoDesdePDronExistente(){
         String nameTest = "Prueba Idea Negocio 1";
         String pedido = "AAAAD";
-        Dron dronPasado = new Dron(1,new Posicion(0,5,Direccion.O));//Dron en posición (0,5,O)
+        Dron dronPasado = new Dron(1,new Posicion(0,5,Direccion.O),3);//Dron en posición (0,5,O)
         String posicionFinal = entregarPedido(dronPasado,pedido);
 
         System.out.println("Test"+nameTest +" /Posición Final del dron: "+posicionFinal);
@@ -55,7 +55,7 @@ public class Taller1Suite {
     @Test
     public void entregarTresPedidos(){
         List<String> pedidos = List.of("AAAAI","AAAAI","AAAAI","AAAA");
-        Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
+        Dron dron = new Dron(0, new Posicion(0,0,Direccion.N),3);
         assertEquals(reportarEntregasDron(dron,pedidos),
                 "== Reporte de entregas ==\n" +
                 "(0,4) Dirección Oeste\n" +
