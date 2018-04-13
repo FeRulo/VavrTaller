@@ -1,9 +1,8 @@
 package dominio.servicios;
 
-
+import static dominio.servicios.ServidorPosicion.*;
 import dominio.entidades.Dron;
 import dominio.entidades.Instruccion;
-
 import java.util.EnumSet;
 import java.util.Set;
 import java.util.function.BiConsumer;
@@ -11,6 +10,7 @@ import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collector;
+
 
 public class DronCollector implements Collector<Instruccion, Dron, Dron> {
 
@@ -32,7 +32,7 @@ public class DronCollector implements Collector<Instruccion, Dron, Dron> {
     @Override
     public BiConsumer<Dron, Instruccion> accumulator() {
         return (Dron d, Instruccion i) -> {
-            d.p = ServidorPosicion.cambiarPosicion(d.p, i);
+            d.p = cambiarPosicion(d.p, i);
         };
     }
 
@@ -43,8 +43,8 @@ public class DronCollector implements Collector<Instruccion, Dron, Dron> {
 
     @Override
     public Function<Dron, Dron> finisher() {
-        return (Dron d1) -> {
-            return d1;
+        return (Dron df) -> {
+            return df;
         };
     }
 

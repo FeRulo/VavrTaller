@@ -1,33 +1,30 @@
 package dominio.servicios;
 
 import io.vavr.collection.List;
+import io.vavr.control.Try;
 
 import java.io.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ServidorArchivos {
-    public static List<String> importarInstrucciones(String ruta) throws FileNotFoundException, IOException {
-        List<String> instrucciones = List.empty();
-        File archivo = new File(ruta);
-        FileReader fr = new FileReader(archivo);
-        BufferedReader br = new BufferedReader(fr);
-        String linea;
-        while ((linea = br.readLine()) != null)
-            instrucciones = instrucciones.append(linea);
-        return instrucciones;
+
+    public static Try<List<String>> importarInstrucciones(String rutaArchivo){
+        return Try.of(()->new FileReader(new File(rutaArchivo)))
+                .flatMap(fr->Try.of(()->new BufferedReader(fr))
+                .flatMap(br->Try.of(()->List.ofAll(br.lines()))));
     }
 
-    public static void exportarReporte(String reporte, String ruta) throws IOException{
-        File archivo = new File(ruta);
-        BufferedWriter bw;
-        if (archivo.exists()) {
-            bw = new BufferedWriter(new FileWriter(archivo));
-            bw.write(reporte);
-        } else {
-            bw = new BufferedWriter(
-                    new FileWriter(archivo));
-            bw.write(reporte);
-        }
-        bw.close();
+
+    public static Try<String> exportarReporte(String reporte, String rutaArchivo) {
+        return Try.of(()->new File(rutaArchivo))
+                .flatMap(f->Try.of(()->new FileWriter(f))
+                .flatMap(fw ->Try.of(()->new BufferedWriter(fw))
+                .flatMap(bw ->Try.of(()->{
+                    bw.write(reporte);
+                    bw.close();
+                    return "Escritura exitosa";
+                }))));
     }
 
 }

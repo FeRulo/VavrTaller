@@ -1,20 +1,24 @@
-import static dominio.servicios.DistribuidorAlmuerzos.reportarVariasEntregas;
+import static dominio.servicios.DistribuidorAlmuerzosVavr.*;
 import static dominio.servicios.ServidorArchivos.*;
 import static org.junit.Assert.assertEquals;
 
+import dominio.entidades.Direccion;
+import dominio.entidades.Dron;
+import dominio.entidades.Posicion;
 import io.vavr.collection.List;
+import io.vavr.control.Try;
 
 import java.io.*;
 
 public class Main {
     public static void main(String [] arg) {
-        try{
-            List<String> instrucciones = importarInstrucciones("src/main/resources/rutas.txt");
-            String reporte = reportarVariasEntregas(instrucciones);
-            exportarReporte(reporte,"src/main/resources/reporte.txt");
-        }catch (IOException e){
-            System.out.println("Error: " + e.getMessage());
-        }
+        Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
+        Try<String> resultado = importarInstrucciones("src/main/resources/rutas.txt")
+                .map(instrucciones -> reportarEntregasDron2(dron,instrucciones))
+                .flatMap(reporte -> exportarReporte(reporte,"src/main/resources/reporte.txt"));
+
+        String respuesta = resultado.isFailure()? "Especificación de ruta inválida": "Operación exitosa";
+        System.out.println(respuesta);
     }
 }
 

@@ -3,20 +3,33 @@ package taller;
 import dominio.entidades.Direccion;
 import dominio.entidades.Dron;
 import dominio.entidades.Posicion;
+import dominio.servicios.DistribuidorAlmuerzos;
+import static dominio.servicios.DistribuidorAlmuerzosVavr.*;
 import io.vavr.collection.List;
+import io.vavr.control.Either;
+import io.vavr.control.Try;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.powermock.modules.junit4.PowerMockRunner;
 
+import static dominio.servicios.ServidorArchivos.exportarReporte;
+import static dominio.servicios.ServidorArchivos.importarInstrucciones;
+
+import static dominio.servicios.ServidorPosicion.posicionToString;
+
+import static dominio.entidades.Posicion.*;
+import static io.vavr.API.Success;
+import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.*;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 
 import static dominio.servicios.DistribuidorAlmuerzos.*;
 import dominio.entidades.*;
 
-@RunWith(PowerMockRunner.class)
+import java.io.FileNotFoundException;
+//@RunWith(PowerMockRunner.class)
 //@PrepareForTest(fullyQualifiedNames = "DistribuidorAlmuerzos")
-public class DronSuite {
+public class Taller1Suite {
 
     @Test
     public void entregarPedidoDesde0(){
@@ -42,15 +55,14 @@ public class DronSuite {
     @Test
     public void entregarTresPedidos(){
         List<String> pedidos = List.of("AAAAI","AAAAI","AAAAI","AAAA");
-        System.out.println(reportarVariasEntregas(pedidos));
-        assertEquals(reportarVariasEntregas(pedidos),
+        Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
+        assertEquals(reportarEntregasDron(dron,pedidos),
                 "== Reporte de entregas ==\n" +
                 "(0,4) Dirección Oeste\n" +
                 "(-4,4) Dirección Sur\n" +
                 "(-4,0) Dirección Este\n"+
                 "(0,0) Dirección Este\n");
     }
-
 
 
 }
