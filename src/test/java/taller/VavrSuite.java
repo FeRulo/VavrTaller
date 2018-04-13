@@ -73,7 +73,7 @@ public class VavrSuite {
 
     @Test
     public void leerArchivo(){
-        Try<List<String>> instrucciones = importarInstrucciones("src/main/resources/rutas.txt");
+        Try<List<String>> instrucciones = importarInstrucciones("src/main/resources/rutasPruebas.txt");
         assertEquals(instrucciones,
                 Success(List.of("AAAAAAAAAI",
                 "AIDAAID",
@@ -84,7 +84,7 @@ public class VavrSuite {
 
     @Test
     public void leerArchivoYReportar(){
-        Try<List<String>> instrucciones = importarInstrucciones("src/main/resources/rutas.txt");
+        Try<List<String>> instrucciones = importarInstrucciones("src/main/resources/rutasPruebas.txt");
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
         Try<String> reporte = instrucciones.flatMap(l->Try.of(()->reportarEntregasDronVavr(dron,l)));
         assertEquals(reporte, Success("== Reporte de entregas ==\n" +
@@ -95,9 +95,9 @@ public class VavrSuite {
     @Test
     public void leerArchivoReportarYArchivar(){
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
-        Try<String> resultado = importarInstrucciones("src/main/resources/rutas.txt")
+        Try<String> resultado = importarInstrucciones("src/main/resources/rutasPruebas.txt")
                 .flatMap(instrucciones -> Try.of(()->reportarEntregasDronVavr(dron, instrucciones))
-                        .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reporte.txt")
+                        .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reportePruebas.txt")
                         ));
         String respuesta = (resultado.isFailure())? "Especificación de ruta inválida": "Operación exitosa";
         assertEquals("Operación exitosa",respuesta);
@@ -108,7 +108,7 @@ public class VavrSuite {
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
         Try<String> resultado = importarInstrucciones("src/main/resources/ruta.txt")
                 .flatMap(instrucciones -> Try.of(()->reportarEntregasDronVavr(dron, instrucciones))
-                .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reporte.txt")
+                .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reportePruebas.txt")
                 ));
         resultado.get();
     }

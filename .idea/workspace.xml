@@ -6,9 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="898c5201-78d3-4c75-a4b6-3404c4ce39f7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/entidades/Limites.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/entidades/Limites.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/taller/VavrSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/taller/VavrSuite.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,8 +29,17 @@
       <file leaf-file-name="VavrSuite.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/taller/VavrSuite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-64">
-              <caret line="61" column="28" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="28" />
+            <state relative-caret-position="101">
+              <caret line="110" column="97" selection-start-line="110" selection-start-column="97" selection-end-line="110" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rutas.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/rutas.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="4" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -71,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DistribuidorAlmuerzosVavr.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DistribuidorAlmuerzosVavr.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="720">
@@ -79,6 +85,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rutasPruebas.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/rutasPruebas.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -110,9 +125,14 @@
       <find>3</find>
       <find>10</find>
       <find>generarListaPosicionesFinales2</find>
+      <find>reporte.txt</find>
     </findStrings>
     <replaceStrings>
       <replace>generarListaPosicionesFinalesVavr</replace>
+      <replace>rutasPruebasp</replace>
+      <replace>rutasPruebas</replace>
+      <replace>reportePruebas</replace>
+      <replace>reportePruebas.txt</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/java/dominio/servicios</dir>
@@ -161,9 +181,10 @@
         <option value="$PROJECT_DIR$/src/test/java/taller/Taller1Suite.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/ValidadorRutas.java" />
-        <option value="$PROJECT_DIR$/src/test/java/taller/VavrSuite.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/entidades/Limites.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java" />
+        <option value="$PROJECT_DIR$/src/test/java/taller/VavrSuite.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/rutasPruebas.txt" />
       </list>
     </option>
   </component>
@@ -589,12 +610,12 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32960895" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295082" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32083002" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32083002" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" weight="0.32786885" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -674,13 +695,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/ejemplos/EnumSuite.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/taller/Taller1Suite.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -927,13 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/rutas.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -941,13 +948,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/taller/VavrSuite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64">
-          <caret line="61" column="28" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -975,6 +975,27 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/taller/VavrSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="110" column="97" selection-start-line="110" selection-start-column="97" selection-end-line="110" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/rutas.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/rutasPruebas.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
         </state>
       </provider>
     </entry>
