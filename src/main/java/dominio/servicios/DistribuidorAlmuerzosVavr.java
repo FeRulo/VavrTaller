@@ -4,6 +4,7 @@ import dominio.entidades.Direccion;
 import dominio.entidades.Dron;
 import dominio.entidades.Instruccion;
 import dominio.entidades.Posicion;
+import io.vavr.Tuple;
 import io.vavr.collection.List;
 import io.vavr.control.Either;
 import static dominio.servicios.ValidadorRutas.*;

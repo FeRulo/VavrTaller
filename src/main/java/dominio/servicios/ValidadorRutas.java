@@ -13,7 +13,7 @@ public class ValidadorRutas {
     }
 
     public static Either<String, Posicion> validarPosicionPorMaxCuadras(Integer limite, Posicion posicion){
-        return ( Math.abs(posicion.x) > limite && Math.abs(posicion.y) > limite )?Right(posicion):Left("Posición " +
-                "resultante " + ServidorPosicion.posicionToString(posicion)+" fuera de los límites");
+        return ( Math.abs(posicion.x) <= limite && Math.abs(posicion.y) <= limite )?Right(posicion):Left("Posición " +
+                "resultante [" + ServidorPosicion.posicionToString(posicion)+"] fuera de los límites");
     }
 }

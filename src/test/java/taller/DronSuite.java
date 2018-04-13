@@ -23,7 +23,7 @@ import static dominio.servicios.DistribuidorAlmuerzos.*;
 import dominio.entidades.*;
 
 import java.io.FileNotFoundException;
-@RunWith(PowerMockRunner.class)
+//@RunWith(PowerMockRunner.class)
 //@PrepareForTest(fullyQualifiedNames = "DistribuidorAlmuerzos")
 public class DronSuite {
 
@@ -51,8 +51,8 @@ public class DronSuite {
     @Test
     public void entregarTresPedidos(){
         List<String> pedidos = List.of("AAAAI","AAAAI","AAAAI","AAAA");
-        System.out.println(reportarVariasEntregas(pedidos));
-        assertEquals(reportarVariasEntregas(pedidos),
+        Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
+        assertEquals(reportarVariasEntregas(dron,pedidos),
                 "== Reporte de entregas ==\n" +
                 "(0,4) Dirección Oeste\n" +
                 "(-4,4) Dirección Sur\n" +
@@ -74,7 +74,8 @@ public class DronSuite {
     @Test
     public void leerArchivoYReportar(){
         Try<List<String>> instrucciones = importarInstrucciones("src/main/resources/rutas.txt");
-        Try<String> reporte = instrucciones.flatMap(l->Try.of(()->reportarVariasEntregas(l)));
+        Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
+        Try<String> reporte = instrucciones.flatMap(l->Try.of(()->reportarVariasEntregas(dron,l)));
         System.out.println(reporte);
         assertEquals(reporte, Success("== Reporte de entregas ==\n" +
                 "(0,9) Dirección Oeste\n" +
@@ -87,19 +88,20 @@ public class DronSuite {
 
     @Test
     public void leerArchivoReportarYArchivar(){
+        Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
         Try<String> resultado = importarInstrucciones("src/main/resources/rutas.txt")
-                .flatMap(instrucciones -> Try.of(()->reportarVariasEntregas(instrucciones))
+                .flatMap(instrucciones -> Try.of(()->reportarVariasEntregas(dron, instrucciones))
                         .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reporte.txt")
                         ));
-        resultado.get();
         String respuesta = (resultado.isFailure())? "Especificación de ruta inválida": "Operación exitosa";
         assertEquals("Operación exitosa",respuesta);
     }
 
     @Test(expected = FileNotFoundException.class)
     public void leerArchivoReportarYArchivarError(){
+        Dron dron = new Dron(0, new Posicion(0,0,Direccion.N));
         Try<String> resultado = importarInstrucciones("src/main/resources/ruta.txt")
-                .flatMap(instrucciones -> Try.of(()->reportarVariasEntregas(instrucciones))
+                .flatMap(instrucciones -> Try.of(()->reportarVariasEntregas(dron, instrucciones))
                 .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reporte.txt")
                 ));
         resultado.get();
@@ -107,6 +109,7 @@ public class DronSuite {
 
     @Test
     public void validacionFallidaEntregarTresPedidos(){
+
         List<String> pedidos = List.of("AAAAI","AAAAI","AAAAI","AAAAI");
         Either<String, List<Either<String,Posicion>>> reporte = DistribuidorAlmuerzosVavr.reportarVariasEntregas2(pedidos);
         System.out.println(reporte.getLeft());
@@ -115,12 +118,10 @@ public class DronSuite {
 
     @Test
     public void validacionEntregarTresPedidos(){
-        List<String> pedidos = List.of("AAAAI","AAAAI","AAAAI");
+        List<String> pedidos = List.of("AAAAAAAAAAAAAAAI","AAAAD","AAAAAAAAI");
         Either<String, List<Either<String,Posicion>>> reporte = DistribuidorAlmuerzosVavr.reportarVariasEntregas2(pedidos);
-        System.out.println(reporte.get().toString());
-       assertTrue(reporte.isRight());
+        System.out.println(reporte.get());
+        assertTrue(reporte.isRight());
     }
-
-
 
 }
