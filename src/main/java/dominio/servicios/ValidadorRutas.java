@@ -8,9 +8,7 @@ import static io.vavr.API.*;
 public class ValidadorRutas {
 
     public static Either<String, List<String>> validarCantidadRutas(Integer capacidadDron, List<String> rutas){
-        System.out.println(rutas.size() );
-        System.out.println(rutas.size() < capacidadDron && rutas.size() > 0);
-        return (rutas.size() < capacidadDron && rutas.size() > 0)?Right(rutas):Left("El Número " +
+        return (rutas.size() <= capacidadDron && rutas.size() > 0)?Right(rutas):Left("El Número " +
                 "de Rutas Excede la capacidad del drón");
     }
 

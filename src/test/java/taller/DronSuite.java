@@ -117,8 +117,8 @@ public class DronSuite {
     public void validacionEntregarTresPedidos(){
         List<String> pedidos = List.of("AAAAI","AAAAI","AAAAI");
         Either<String, List<Either<String,Posicion>>> reporte = DistribuidorAlmuerzosVavr.reportarVariasEntregas2(pedidos);
-        System.out.println(reporte.toString());
-//        assertTrue(reporte.isRight());
+        System.out.println(reporte.get().toString());
+       assertTrue(reporte.isRight());
     }
 
 
