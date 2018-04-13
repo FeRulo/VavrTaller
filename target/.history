@@ -4,3 +4,4 @@ testOnly ejemplos.MockitoSuite
 testOnly taller.DronSuite
 compile
 testOnly taller.DronSuite
+testOnly taller.VavrSuite

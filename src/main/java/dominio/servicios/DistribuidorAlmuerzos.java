@@ -42,13 +42,13 @@ public class DistribuidorAlmuerzos {
         return posicionToString(dron0.p);
     };
 
-    public static List<Posicion> generarListaPosicionesFinales(Dron dron, List<String> entregas){
-        return entregas.map(instruccion-> enviarDron(dron, instruccion).p);
+    public static List<Posicion> generarListaPosicionesFinales(Dron dron, List<String> pedidos){
+        return pedidos.map(instruccion-> enviarDron(dron, instruccion).p);
     }
 
-    public static String reportarEntregasDron(Dron dron, List<String> entregas){
+    public static String reportarEntregasDron(Dron dron, List<String> pedidos){
         final String[] reporte = {"== Reporte de entregas ==\n"};
-        generarListaPosicionesFinales(dron, entregas).forEach(posicion-> {
+        generarListaPosicionesFinales(dron, pedidos).forEach(posicion-> {
             reporte[0] += posicionToString(posicion) + "\n";
         });
         return reporte[0];

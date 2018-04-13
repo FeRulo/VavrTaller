@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/home/s4n/Fernando/CorrientazoADomicilio/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java:48:1:  inference variable U has incompatible bounds[0m
+[0m[[0m[31merror[0m] [0m[0m    equality constraints: io.vavr.collection.List<io.vavr.control.Either<java.lang.String,dominio.entidades.Posicion>>[0m
+[0m[[0m[31merror[0m] [0m[0m    lower bounds: io.vavr.collection.List<java.lang.Object>[0m
+[0m[[0m[31merror[0m] [0m[0m                .map(ls-> ls[0m
