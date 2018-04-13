@@ -1,2 +1,4 @@
 == Reporte de entregas ==
-El Número de Rutas Excede la capacidad del drón
+(0,5) Dirección Oeste
+(-3,5) Dirección Oeste
+(-6,6) Dirección Este
