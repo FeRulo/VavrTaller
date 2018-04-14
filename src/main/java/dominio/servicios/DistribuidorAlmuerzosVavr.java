@@ -1,13 +1,9 @@
 package dominio.servicios;
 
 import dominio.entidades.*;
-import io.vavr.Tuple;
 import io.vavr.collection.List;
 import io.vavr.control.Either;
-import static dominio.servicios.ValidadorRutas.*;
-import static io.vavr.API.*;
-
-import java.util.stream.Stream;
+import static dominio.servicios.ServidorRutas.*;
 
 import static dominio.servicios.ServidorPosicion.posicionToString;
 
@@ -42,12 +38,16 @@ public class DistribuidorAlmuerzosVavr extends DistribuidorAlmuerzos{
 
     public static Either<String, List<Either<String,Posicion>>>  generarListaPosicionesFinalesVavr(Dron dron, List<String> rutas){
         return validarCantidadRutas(dron.capacidad, rutas)
-                .map(ls-> ls
-                        .map(ruta -> validarPosicionPorMaxCuadras(Limites.radio,dron.p)
-                                .flatMap(pos-> validarPosicionPorMaxCuadras(Limites.radio,enviarDron(dron, ruta).p))
-
-                        )
-                        .distinct()
-                );
+                .map(ls-> {
+                    return ls
+                            .map(ruta -> validarPosicionPorMaxCuadras(Limites.radio, dron.p)
+                                    .flatMap(pos -> validarPosicionPorMaxCuadras(Limites.radio, enviarDron(dron, ruta).p)
+                                            .mapLeft(error -> {
+                                                return error; //+"/n el dron se ha devuelto a la posición "+posicionToString(dron.p);
+                                            })
+                                    )
+                            )
+                            .distinct();
+                });
     }
 }

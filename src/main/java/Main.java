@@ -18,7 +18,7 @@ public class Main {
                 .flatMap(reporte -> exportarReporte(reporte,"src/main/resources/reporte.txt"));
 
         String respuesta = resultado.isFailure()? "Especificación de ruta inválida": "Operación exitosa";
-        System.out.println(respuesta);
+
     }
 }
 

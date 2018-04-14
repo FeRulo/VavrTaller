@@ -58,7 +58,6 @@ public class VavrSuite {
         List<String> pedidos = List.of("AAAAAAAAAAAAAAAI","AAAAD","AAAAAAAAI");
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N),3);
         String reporte = reportarEntregasDronVavr(dron, pedidos);
-        System.out.println(posicionToString(dron.p));
         assertEquals("== Reporte de entregas ==\n" +
                 "El drón no se ha movido por: \n" +
                 "\t-Posición resultante:[(0,15) Dirección Oeste] afuera del límite de cuadras\n",reporte);
