@@ -13,6 +13,7 @@ import java.io.FileNotFoundException;
 import static dominio.servicios.DistribuidorAlmuerzosVavr.*;
 import static dominio.servicios.ServidorArchivos.exportarReporte;
 import static dominio.servicios.ServidorArchivos.importarInstrucciones;
+import static dominio.servicios.ServidorRutas.*;
 import static dominio.servicios.ServidorPosicion.posicionToString;
 import static io.vavr.API.Success;
 import static junit.framework.TestCase.assertEquals;
@@ -112,6 +113,11 @@ public class VavrSuite {
                 .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reportePruebas.txt")
                 ));
         resultado.get();
+    }
+    @Test
+    public void probarRevertirRuta(){
+        assertEquals("AAADIAAA",revertirRuta("AAAIDAAA"));
+
     }
 
 }

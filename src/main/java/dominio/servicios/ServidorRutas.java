@@ -1,11 +1,21 @@
 package dominio.servicios;
 
+import dominio.entidades.Instruccion;
 import dominio.entidades.Posicion;
 import io.vavr.collection.List;
 import io.vavr.control.Either;
+
+import java.util.stream.Stream;
+
 import static io.vavr.API.*;
 
 public class ServidorRutas {
+
+    private static Stream<Instruccion> hacerListaRuta(String ruta){
+        return ruta
+                .codePoints()
+                .mapToObj(c -> Instruccion.valueOf(String.valueOf((char) c)));
+    }
 
     public static Either<String, List<String>> validarCantidadRutas(Integer capacidadDron, List<String> rutas){
         return Either.right(rutas)
@@ -22,7 +32,14 @@ public class ServidorRutas {
                 "resultante:[" + ServidorPosicion.posicionToString(posicion)+"] afuera del límite de cuadras");
     }
 
-    public static String obtenerRutaReciproca(){
-
+    public static String revertirRuta(String ruta){
+        System.out.println(
+                List.ofAll(hacerListaRuta(new StringBuilder(ruta)
+                .reverse()
+                .toString()))
+        );
+        return new StringBuilder(ruta)
+                .reverse()
+                .toString();
     }
 }
