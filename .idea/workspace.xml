@@ -6,8 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="898c5201-78d3-4c75-a4b6-3404c4ce39f7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,8 +29,8 @@
       <file leaf-file-name="VavrSuite.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/taller/VavrSuite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1515">
-              <caret line="118" column="57" selection-start-line="118" selection-start-column="57" selection-end-line="118" selection-end-column="57" />
+            <state relative-caret-position="120">
+              <caret line="77" column="55" lean-forward="true" selection-start-line="77" selection-start-column="55" selection-end-line="77" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,7 +62,7 @@
       <file leaf-file-name="DistribuidorAlmuerzos.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="159">
               <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -72,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DistribuidorAlmuerzosVavr.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DistribuidorAlmuerzosVavr.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="165">
+              <caret line="23" column="76" lean-forward="true" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,6 +88,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServidorArchivos.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorArchivos.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,20 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dron.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/entidades/Dron.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -217,6 +219,7 @@
         <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzos.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorRutas.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -258,46 +261,6 @@
               <item name="CorrientazoADomicilio" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CorrientazoADomicilio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CorrientazoADomicilio" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CorrientazoADomicilio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CorrientazoADomicilio" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dominio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CorrientazoADomicilio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CorrientazoADomicilio" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dominio" type="462c0819:PsiDirectoryNode" />
-              <item name="entidades" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CorrientazoADomicilio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CorrientazoADomicilio" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dominio" type="462c0819:PsiDirectoryNode" />
-              <item name="servicios" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CorrientazoADomicilio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CorrientazoADomicilio" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CorrientazoADomicilio" type="b2602c69:ProjectViewProjectNode" />
@@ -362,7 +325,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VavrSuite">
+  <component name="RunManager" selected="JUnit.VavrSuite.leerArchivo">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -389,6 +352,29 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="VavrSuite.leerArchivo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="root" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="taller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="taller" />
+      <option name="MAIN_CLASS_NAME" value="taller.VavrSuite" />
+      <option name="METHOD_NAME" value="leerArchivo" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration name="VavrSuite.probarRevertirRuta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="root" />
       <extension name="coverage">
@@ -402,29 +388,6 @@
       <option name="PACKAGE_NAME" value="taller" />
       <option name="MAIN_CLASS_NAME" value="taller.VavrSuite" />
       <option name="METHOD_NAME" value="probarRevertirRuta" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="VavrSuite.validacionEntregarNingúnPedido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="root" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="taller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="taller" />
-      <option name="MAIN_CLASS_NAME" value="taller.VavrSuite" />
-      <option name="METHOD_NAME" value="validacionEntregarNingúnPedido" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -532,17 +495,17 @@
     <list>
       <item itemvalue="JUnit.VavrSuite" />
       <item itemvalue="JUnit.VavrSuite.validacionEntregarPrimerPedidoError" />
-      <item itemvalue="JUnit.VavrSuite.validacionEntregarNingúnPedido" />
       <item itemvalue="JUnit.VavrSuite.validacionEntregarTresPedidos" />
       <item itemvalue="JUnit.VavrSuite.probarRevertirRuta" />
+      <item itemvalue="JUnit.VavrSuite.leerArchivo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VavrSuite.leerArchivo" />
         <item itemvalue="JUnit.VavrSuite" />
         <item itemvalue="JUnit.VavrSuite.validacionEntregarPrimerPedidoError" />
         <item itemvalue="JUnit.VavrSuite.probarRevertirRuta" />
         <item itemvalue="JUnit.VavrSuite.validacionEntregarTresPedidos" />
-        <item itemvalue="JUnit.VavrSuite.validacionEntregarNingúnPedido" />
       </list>
     </recent_temporary>
   </component>
@@ -598,12 +561,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VavrSuite_probarRevertirRuta - 2018.04.13 at 19h 34m 08s.xml">
-      <configuration name="VavrSuite.probarRevertirRuta" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VavrSuite_probarRevertirRuta - 2018.04.13 at 19h 34m 39s.xml">
-      <configuration name="VavrSuite.probarRevertirRuta" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="VavrSuite_probarRevertirRuta - 2018.04.13 at 19h 35m 11s.xml">
       <configuration name="VavrSuite.probarRevertirRuta" configurationId="JUnit" />
     </history-entry>
@@ -628,6 +585,12 @@
     <history-entry file="VavrSuite_validacionEntregarPrimerPedidoError - 2018.04.16 at 09h 23m 56s.xml">
       <configuration name="VavrSuite.validacionEntregarPrimerPedidoError" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="VavrSuite - 2018.04.16 at 09h 31m 47s.xml">
+      <configuration name="VavrSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VavrSuite_leerArchivo - 2018.04.16 at 09h 48m 03s.xml">
+      <configuration name="VavrSuite.leerArchivo" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
@@ -642,18 +605,18 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.017557861" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24102154" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" weight="0.32786885" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -848,16 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorArchivos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/rutasPruebas.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -913,13 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dominio/entidades/Dron.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -941,20 +887,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/taller/VavrSuite.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorRutas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="118" column="57" selection-start-line="118" selection-start-column="57" selection-end-line="118" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        <state relative-caret-position="528">
+          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -968,10 +904,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorRutas.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+        <state relative-caret-position="165">
+          <caret line="23" column="76" lean-forward="true" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -985,13 +931,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/taller/VavrSuite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="120">
+          <caret line="77" column="55" lean-forward="true" selection-start-line="77" selection-start-column="55" selection-end-line="77" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorArchivos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
         </state>
       </provider>
     </entry>
