@@ -10,18 +10,17 @@ import static dominio.servicios.ServidorPosicion.posicionToString;
 public class DistribuidorAlmuerzosVavr extends DistribuidorAlmuerzos{
 
     public static String reportarEntregasDronVavr(Dron dron, List<String> pedidos){
-        return generarListaPosicionesFinalesVavr(dron, pedidos)
+        return "== Reporte de entregas ==\n"+generarListaPosicionesFinalesVavr(dron, pedidos)
                 .map(listaEithers-> listaEithers//Lista de eithers
                         .map(ePosicion ->
                                 ePosicion
                                 .fold(error -> "El drón no se ha movido por: \n\t-"+ error + "\n"
                                         ,posicion -> posicionToString(posicion) + "\n"
                                 )
-                        )
-                        .fold("== Reporte de entregas ==\n",
-                                (s, s2) -> s + s2)
+                        ) //lista de strings
+                        .fold("",(s, s2) -> s + s2)
                 )
-                .fold(  error -> "== Reporte de entregas ==\n"+error + "\n",
+                .fold(  error -> error + "\n",
                         reporte -> reporte
                 );
     };
