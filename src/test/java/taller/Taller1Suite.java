@@ -37,7 +37,6 @@ public class Taller1Suite {
         String pedido = "AAAIA";
         String posicionFinal = entregarPedido(pedido);
 
-        System.out.println("Test"+nameTest +" /Posición Final del dron: "+posicionFinal);
         assertEquals("(-1,3) Dirección Oeste", posicionFinal);
     }
 
@@ -48,7 +47,6 @@ public class Taller1Suite {
         Dron dronPasado = new Dron(1,new Posicion(0,5,Direccion.O),3);//Dron en posición (0,5,O)
         String posicionFinal = entregarPedido(dronPasado,pedido);
 
-        System.out.println("Test"+nameTest +" /Posición Final del dron: "+posicionFinal);
         assertEquals("(-4,5) Dirección Norte", posicionFinal);
     }
 

@@ -8,7 +8,7 @@ import dominio.entidades.Instruccion;
 import dominio.entidades.Posicion;
 import io.vavr.collection.List;
 import io.vavr.control.Either;
-
+import static dominio.servicios.ServidorRutas.*;
 
 import java.util.Arrays;
 import java.util.stream.Stream;

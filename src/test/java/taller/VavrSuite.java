@@ -13,6 +13,7 @@ import java.io.FileNotFoundException;
 import static dominio.servicios.DistribuidorAlmuerzosVavr.*;
 import static dominio.servicios.ServidorArchivos.exportarReporte;
 import static dominio.servicios.ServidorArchivos.importarInstrucciones;
+import static dominio.servicios.ServidorRutas.*;
 import static dominio.servicios.ServidorPosicion.posicionToString;
 import static io.vavr.API.Success;
 import static junit.framework.TestCase.assertEquals;
@@ -58,7 +59,6 @@ public class VavrSuite {
         List<String> pedidos = List.of("AAAAAAAAAAAAAAAI","AAAAD","AAAAAAAAI");
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N),3);
         String reporte = reportarEntregasDronVavr(dron, pedidos);
-        System.out.println(posicionToString(dron.p));
         assertEquals("== Reporte de entregas ==\n" +
                 "El drón no se ha movido por: \n" +
                 "\t-Posición resultante:[(0,15) Dirección Oeste] afuera del límite de cuadras\n",reporte);
@@ -113,6 +113,11 @@ public class VavrSuite {
                 .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reportePruebas.txt")
                 ));
         resultado.get();
+    }
+    @Test
+    public void probarRevertirRuta(){
+        assertEquals("AAADIAAA",revertirRuta("AAAIDAAA"));
+
     }
 
 }
