@@ -10,30 +10,20 @@ import static dominio.servicios.ServidorPosicion.posicionToString;
 public class DistribuidorAlmuerzosVavr extends DistribuidorAlmuerzos{
 
     public static String reportarEntregasDronVavr(Dron dron, List<String> pedidos){
-        final String[] reporte = {"== Reporte de entregas ==\n"};
-
-        generarListaPosicionesFinalesVavr(dron, pedidos)
+        return generarListaPosicionesFinalesVavr(dron, pedidos)
                 .map(listaEithers-> listaEithers//Lista de eithers
                         .map(ePosicion ->
                                 ePosicion
-                                .map(posicion -> {
-                                            reporte[0] += posicionToString(posicion) + "\n";
-                                            return posicionToString(posicion);
-                                        }
-                                )
-                                .mapLeft(error -> {
-                                            reporte[0] += "El drón no se ha movido por: \n\t-"+ error + "\n";
-                                            return error;
-                                        }
+                                .fold(error -> "El drón no se ha movido por: \n\t-"+ error + "\n"
+                                        ,posicion -> posicionToString(posicion) + "\n"
                                 )
                         )
+                        .fold("== Reporte de entregas ==\n",
+                                (s, s2) -> s + s2)
                 )
-                .mapLeft(error -> {
-                            reporte[0] += error + "\n";
-                            return error;
-                        }
+                .fold(  error -> "== Reporte de entregas ==\n"+error + "\n",
+                        reporte -> reporte
                 );
-        return reporte[0];
     };
 
     public static Either<String, List<Either<String,Posicion>>>  generarListaPosicionesFinalesVavr(Dron dron, List<String> rutas){
