@@ -14,7 +14,7 @@ public class DistribuidorAlmuerzosVavr extends DistribuidorAlmuerzos{
                 .map(listaEithers-> listaEithers//Lista de eithers
                         .map(ePosicion ->
                                 ePosicion
-                                .fold(error -> "El drón no se ha movido por: \n\t-"+ error + "\n"
+                                .fold(error ->error + "\n"
                                         ,posicion -> posicionToString(posicion) + "\n"
                                 )
                         ) //lista de strings
@@ -32,7 +32,8 @@ public class DistribuidorAlmuerzosVavr extends DistribuidorAlmuerzos{
                             .map(ruta -> validarPosicionPorMaxCuadras(Limites.radio, dron.p)
                                     .flatMap(pos -> validarPosicionPorMaxCuadras(Limites.radio, enviarDron(dron, ruta).p)
                                             .mapLeft(error -> {
-                                                return error; //+"/n el dron se ha devuelto a la posición "+posicionToString(dron.p);
+                                                return "El dron se ha devuelto a la posición "+
+                                                        posicionToString(enviarDron(dron, revertirRuta(ruta)).p)+ " porque:\n\t-"+ error;
                                             })
                                     )
                             )
