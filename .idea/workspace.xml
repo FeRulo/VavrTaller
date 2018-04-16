@@ -5,12 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorArchivos.java" line="5" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="898c5201-78d3-4c75-a4b6-3404c4ce39f7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/servicios/DistribuidorAlmuerzosVavr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorRutas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/servicios/ServidorRutas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/taller/VavrSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/taller/VavrSuite.java" afterDir="false" />
-    </list>
+    <list default="true" id="898c5201-78d3-4c75-a4b6-3404c4ce39f7" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -44,7 +39,7 @@
       <file leaf-file-name="VavrSuite.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/taller/VavrSuite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="834">
               <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -84,12 +79,12 @@
       <find>validarPosicionPorMaxCuadras</find>
       <find>capacidad</find>
       <find>validarCantidadRutas</find>
-      <find />
-      <find />
+      <find>new Dron(0, new Posicion(0,0,Direccion.N))</find>
+      <find>new Dron(</find>
       <find>System</find>
       <find>Syste</find>
       <find>toString</find>
-      <find />
+      <find>no se ha</find>
     </findStrings>
     <replaceStrings>
       <replace>generarListaPosicionesFinalesVavr</replace>
@@ -98,7 +93,7 @@
       <replace>reportePruebas</replace>
       <replace>reportePruebas.txt</replace>
       <replace>validarPosicionPorCuadrasMaxi</replace>
-      <replace />
+      <replace>new Dron(0, new Posicion(0,0,Direccion.N),3)</replace>
       <replace />
     </replaceStrings>
     <dirStrings>
@@ -531,12 +526,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VavrSuite_validacionEntregarTresPedidosSaliendoseLímites - 2018.04.16 at 11h 17m 18s.xml">
-      <configuration name="VavrSuite.validacionEntregarTresPedidosSaliendoseLímites" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VavrSuite_validacionEntregarPrimerPedidoError - 2018.04.16 at 11h 17m 43s.xml">
-      <configuration name="VavrSuite.validacionEntregarPrimerPedidoError" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="VavrSuite_validacionEntregarPrimerPedidoError - 2018.04.16 at 11h 19m 05s.xml">
       <configuration name="VavrSuite.validacionEntregarPrimerPedidoError" configurationId="JUnit" />
     </history-entry>
@@ -563,6 +552,12 @@
     </history-entry>
     <history-entry file="VavrSuite_validacionEntregarPrimerPedidoError - 2018.04.16 at 11h 24m 34s.xml">
       <configuration name="VavrSuite.validacionEntregarPrimerPedidoError" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VavrSuite_validacionEntregarPrimerPedidoError - 2018.04.16 at 11h 25m 08s.xml">
+      <configuration name="VavrSuite.validacionEntregarPrimerPedidoError" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VavrSuite - 2018.04.16 at 11h 26m 49s.xml">
+      <configuration name="VavrSuite" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -939,7 +934,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/taller/VavrSuite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="834">
           <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
