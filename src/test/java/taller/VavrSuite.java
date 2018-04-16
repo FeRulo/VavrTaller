@@ -3,6 +3,7 @@ package taller;
 import dominio.entidades.Direccion;
 import dominio.entidades.Dron;
 import dominio.entidades.Posicion;
+import dominio.servicios.DistribuidorAlmuerzos;
 import io.vavr.collection.List;
 import io.vavr.control.Either;
 import io.vavr.control.Try;
@@ -50,8 +51,8 @@ public class VavrSuite {
         assertEquals("== Reporte de entregas ==\n" +
                 "(0,4) Dirección Oeste\n" +
                 "(-4,4) Dirección Norte\n" +
-                "El drón no se ha movido por: \n" +
-                "\t-Posición resultante:[(-4,12) Dirección Oeste] afuera del límite de cuadras\n",reporte);
+                "El dron se ha devuelto a la posición (-4,4) Dirección Norte porque:\n" +
+                "\t-La Posición resultante:[(-4,12) Dirección Oeste] está fuera del límite de cuadras\n",reporte);
     }
 
     @Test
@@ -60,8 +61,10 @@ public class VavrSuite {
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N),3);
         String reporte = reportarEntregasDronVavr(dron, pedidos);
         assertEquals("== Reporte de entregas ==\n" +
-                "El drón no se ha movido por: \n" +
-                "\t-Posición resultante:[(0,15) Dirección Oeste] afuera del límite de cuadras\n",reporte);
+                "El dron se ha devuelto a la posición (0,0) Dirección Norte porque:\n" +
+                "\t-La Posición resultante:[(0,15) Dirección Oeste] está fuera del límite de cuadras\n" +
+                "(0,4) Dirección Este\n" +
+                "(8,4) Dirección Norte\n",reporte);
     }
 
     @Test
@@ -116,7 +119,11 @@ public class VavrSuite {
     }
     @Test
     public void probarRevertirRuta(){
-        assertEquals("AAADIAAA",revertirRuta("AAAIDAAA"));
+        String ruta = "AAAIAAAAAAAAAADAAAIAAAADAAIA";
+        Dron dron = new Dron(0, new Posicion(0,0,Direccion.N),3);
+        assertEquals("(-15,8) Dirección Oeste",DistribuidorAlmuerzos.entregarPedido(dron, ruta));
+        ruta = revertirRuta(ruta);
+        assertEquals("(0,0) Dirección Norte",DistribuidorAlmuerzos.entregarPedido(dron, ruta));
 
     }
 

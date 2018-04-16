@@ -7,6 +7,7 @@ import io.vavr.control.Either;
 
 import java.util.stream.Stream;
 
+import static dominio.servicios.ServidorInstruccion.*;
 import static io.vavr.API.*;
 
 public class ServidorRutas {
@@ -28,18 +29,28 @@ public class ServidorRutas {
 
 
     public static Either<String, Posicion> validarPosicionPorMaxCuadras(Integer limite, Posicion posicion){
-        return ( Math.abs(posicion.x) <= limite && Math.abs(posicion.y) <= limite )?Right(posicion):Left("Posición " +
-                "resultante:[" + ServidorPosicion.posicionToString(posicion)+"] afuera del límite de cuadras");
+        return ( Math.abs(posicion.x) <= limite && Math.abs(posicion.y) <= limite )?Right(posicion):Left("La Posición " +
+                "resultante:[" + ServidorPosicion.posicionToString(posicion)+"] está fuera del límite de cuadras");
     }
 
+
     public static String revertirRuta(String ruta){
-        System.out.println(
-                List.ofAll(hacerListaRuta(new StringBuilder(ruta)
+        return List.ofAll(hacerListaRuta(new StringBuilder("II"+ruta+"II")
                 .reverse()
                 .toString()))
-        );
-        return new StringBuilder(ruta)
-                .reverse()
-                .toString();
+                .map(i->instruccionToString(cambiarInstruccion(i)))
+                .fold("",(s, s2) -> s+s2 );
+    }
+
+    private static Instruccion cambiarInstruccion(Instruccion i){
+        Instruccion cambio = i;
+        switch(i){
+            case A: break;
+            case D: cambio = Instruccion.I;
+                break;
+            case I: cambio = Instruccion.D;
+                break;
+        }
+        return cambio;
     }
 }
