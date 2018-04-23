@@ -18,16 +18,23 @@ public class ServidorRutas {
                 .mapToObj(c -> Instruccion.valueOf(String.valueOf((char) c)));
     }
 
-    public static Either<String, List<String>> validarCantidadRutas(Integer capacidadDron, List<String> rutas){
-        return Either.right(rutas)
+    public static Either<String, List<String>> validarRutas(Integer capacidadDron, List<String> rutas){
+        return Either.right(rutas).mapLeft(s->""+s)
+                .map(l->l
+                    .map(s->Try(()->List.ofAll(DistribuidorAlmuerzos.hacerListaInstrucciones(s))))
+                    .filter(t->t.isSuccess())
+                    .map(t-> {
+                        return t.get()
+                                .map(i->instruccionToString(i))
+                                .fold("",(s,i)->s+i);
+                            }
+                    )
+                )
                 .filter(l->l.size()<= capacidadDron)
                 .getOrElse(Left("El Número de Rutas Excede la capacidad del drón"))
                 .filter(l->l.size() > 0)
-                .getOrElse(Left("No hay rutas que ejecutar"))
-                .mapLeft(s->""+s);
+                .getOrElse(Left("No hay rutas que ejecutar"));
     }
-
-
 
     public static Either<String, Posicion> validarPosicionPorMaxCuadras(Integer limite, Posicion posicion){
         return ( Math.abs(posicion.x) <= limite && Math.abs(posicion.y) <= limite )?Right(posicion):Left("La Posición " +

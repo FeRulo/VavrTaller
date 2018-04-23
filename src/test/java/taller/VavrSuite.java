@@ -2,6 +2,7 @@ package taller;
 
 import dominio.entidades.Direccion;
 import dominio.entidades.Dron;
+import dominio.entidades.Instruccion;
 import dominio.entidades.Posicion;
 import dominio.servicios.DistribuidorAlmuerzos;
 import io.vavr.collection.List;
@@ -10,6 +11,7 @@ import io.vavr.control.Try;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
+import java.util.stream.Stream;
 
 import static dominio.servicios.DistribuidorAlmuerzosVavr.*;
 import static dominio.servicios.ServidorArchivos.exportarReporte;
@@ -77,19 +79,8 @@ public class VavrSuite {
     }
 
     @Test
-    public void leerArchivo(){
-        Try<List<String>> instrucciones = importarInstrucciones("src/main/resources/rutasPruebas.txt");
-        assertEquals(instrucciones,
-                Success(List.of("AAAAAAAAAI",
-                "AIDAAID",
-                "AAAIDDDDD",
-                "AAADA",
-                "AAAAIADAA")));
-    }
-
-    @Test
     public void leerArchivoYReportar(){
-        Try<List<String>> instrucciones = importarInstrucciones("src/main/resources/rutasPruebas.txt");
+        Try<List<String>> instrucciones = importarInstrucciones("src/main/resources/inPruebas.txt");
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N),3);
         Try<String> reporte = instrucciones.flatMap(l->Try.of(()->reportarEntregasDronVavr(dron,l)));
         assertEquals(reporte, Success("== Reporte de entregas ==\n" +
@@ -100,23 +91,36 @@ public class VavrSuite {
     @Test
     public void leerArchivoReportarYArchivar(){
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N),3);
-        Try<String> resultado = importarInstrucciones("src/main/resources/rutasPruebas.txt")
+        Try<String> resultado = importarInstrucciones("src/main/resources/inPruebas.txt")
                 .flatMap(instrucciones -> Try.of(()->reportarEntregasDronVavr(dron, instrucciones))
-                        .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reportePruebas.txt")
-                        ));
-        String respuesta = (resultado.isFailure())? "Especificación de ruta inválida": "Operación exitosa";
-        assertEquals("Operación exitosa",respuesta);
+                        .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/outPruebas.txt")
+                        ))
+                .recover(FileNotFoundException.class, "Especificación de ruta inválida");
+        assertEquals("Escritura exitosa",resultado.get());
     }
 
-    @Test(expected = FileNotFoundException.class)
-    public void leerArchivoReportarYArchivarError(){
+    @Test
+    public void leerArchivoFalsoReportarYArchivar(){
         Dron dron = new Dron(0, new Posicion(0,0,Direccion.N),3);
-        Try<String> resultado = importarInstrucciones("src/main/resources/ruta.txt")
+        Try<String> resultado = importarInstrucciones("src/main/resources/inFalso.txt")
                 .flatMap(instrucciones -> Try.of(()->reportarEntregasDronVavr(dron, instrucciones))
-                .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/reportePruebas.txt")
-                ));
-        resultado.get();
+                .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/outPruebas.txt"))
+                )
+                .recover(FileNotFoundException.class, "Especificación de ruta inválida");
+        assertEquals("Especificación de ruta inválida", resultado.get());
     }
+
+    @Test
+    public void leerArchivoMaloReportarYArchivar(){
+        Dron dron = new Dron(0, new Posicion(0,0,Direccion.N),3);
+        Try<String> resultado = importarInstrucciones("src/main/resources/inMalas.txt")
+                .flatMap(instrucciones -> Try.of(()->reportarEntregasDronVavr(dron, instrucciones))
+                        .flatMap(reporte ->exportarReporte(reporte,"src/main/resources/outPruebasMalas.txt"))
+                )
+                .recover(FileNotFoundException.class, "Especificación de ruta inválida");
+        assertEquals("Escritura exitosa",resultado.get());
+    }
+
     @Test
     public void probarRevertirRuta(){
         String ruta = "AAAIAAAAAAAAAADAAAIAAAADAAIA";
@@ -124,7 +128,6 @@ public class VavrSuite {
         assertEquals("(-15,8) Dirección Oeste",DistribuidorAlmuerzos.entregarPedido(dron, ruta));
         ruta = revertirRuta(ruta);
         assertEquals("(0,0) Dirección Norte",DistribuidorAlmuerzos.entregarPedido(dron, ruta));
-
     }
 
 }

@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 
 public class DistribuidorAlmuerzos {
 
-    private static Stream<Instruccion> hacerListaInstrucciones(String instrucciones){
+    public static Stream<Instruccion> hacerListaInstrucciones(String instrucciones){
         return instrucciones
                 .codePoints()
                 .mapToObj(c -> Instruccion.valueOf(String.valueOf((char) c)));

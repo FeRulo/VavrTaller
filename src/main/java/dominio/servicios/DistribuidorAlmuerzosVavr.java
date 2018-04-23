@@ -12,8 +12,7 @@ public class DistribuidorAlmuerzosVavr extends DistribuidorAlmuerzos{
     public static String reportarEntregasDronVavr(Dron dron, List<String> pedidos){
         return "== Reporte de entregas ==\n"+generarListaPosicionesFinalesVavr(dron, pedidos)
                 .map(listaEithers-> listaEithers//Lista de eithers
-                        .map(ePosicion ->
-                                ePosicion
+                        .map(ePosicion ->ePosicion
                                 .fold(error ->error + "\n"
                                         ,posicion -> posicionToString(posicion) + "\n"
                                 )
@@ -26,9 +25,8 @@ public class DistribuidorAlmuerzosVavr extends DistribuidorAlmuerzos{
     };
 
     public static Either<String, List<Either<String,Posicion>>>  generarListaPosicionesFinalesVavr(Dron dron, List<String> rutas){
-        return validarCantidadRutas(dron.capacidad, rutas)
-                .map(ls-> {
-                    return ls
+        return validarRutas(dron.capacidad, rutas)
+                .map(ls-> ls
                             .map(ruta -> validarPosicionPorMaxCuadras(Limites.radio, dron.p)
                                     .flatMap(pos -> validarPosicionPorMaxCuadras(Limites.radio, enviarDron(dron, ruta).p)
                                             .mapLeft(error -> {
@@ -37,7 +35,7 @@ public class DistribuidorAlmuerzosVavr extends DistribuidorAlmuerzos{
                                             })
                                     )
                             )
-                            .distinct();
-                });
+                            .distinct()
+                );
     }
 }
