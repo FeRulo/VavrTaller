@@ -28,6 +28,7 @@ public class ServidorRutas {
     }
 
 
+
     public static Either<String, Posicion> validarPosicionPorMaxCuadras(Integer limite, Posicion posicion){
         return ( Math.abs(posicion.x) <= limite && Math.abs(posicion.y) <= limite )?Right(posicion):Left("La Posición " +
                 "resultante:[" + ServidorPosicion.posicionToString(posicion)+"] está fuera del límite de cuadras");
