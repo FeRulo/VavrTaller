@@ -1,6 +1,0 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(taller.DronSuite, com.novocode.junit.RunWithFingerprint@7cf8dcb8, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
-[0m[[0m[31merror[0m] [0m[0mFailed: Total 1, Failed 1, Errors 0, Passed 0[0m
-[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
-[0m[[0m[31merror[0m] [0m[0m	taller.DronSuite[0m
-[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
